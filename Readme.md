@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Татьяна Ипатова](https://up.htmlacademy.ru/htmlcss/35/user/1654609).
-* Наставник: Евгений Петров (https://htmlacademy.ru/profile/id617077).
+* Наставник: [Евгений Петров](https://htmlacademy.ru/profile/id617077).
 
 ---
 
