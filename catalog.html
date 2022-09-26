@@ -6,50 +6,50 @@
   </head>
   <body>
     <header class="page-header">
-      <nav class="navigation">
           <a class="navigation-logo" href="index.html">
           <img class="page-header-logo" alt="Логотип «Девайс»." src="index.html">
-        </a>
-        <form class="search" action="https://echo.htmlacademy.ru/" method="post">
+          </a>
+          <form class="search" action="https://echo.htmlacademy.ru/" method="post">
 
           <input class="field"  placeholder="Поиск по сайту" type="text" name="search" id="search">
 
-          <a class="button button-search" href="#">Найти</a>
+          <button class="button" type="submit">Найти</button>
           </form>
 
-        <ul class="navigation-list navigation-user">
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">Коля Петухов</a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">Выйти</a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">Сравнить</a>
+          <ul class="navigation-list navigation-user">
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">Коля Петухов</a>
             </li>
-          </li class="navigation-item">
-            <a class="navigation-link" href="#">Корзина</a>
-        </li>
-        </ul>
-        <ul class="navigation-list">
-          <li class="navigation-item">
-            <a class="navigation-link" href="catalog.html">Каталог товаров</a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="delivery.html">Доставка</a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="guarantee.html">Гарантия</a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="contacts.html">Контакты</a>
-          </li>
-        </ul>
-      </nav>
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">Выйти</a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">Сравнить</a>
+            </li>
+            </li class="navigation-item">
+              <a class="navigation-link" href="#">Корзина</a>
+            </li>
+          </ul>
+
+          <nav class="navigation">
+            <ul class="navigation-list">
+              <li class="navigation-item">
+                <a class="navigation-link" href="catalog.html">Каталог товаров</a>
+              </li>
+              <li class="navigation-item">
+                <a class="navigation-link" href="delivery.html">Доставка</a>
+              </li>
+              <li class="navigation-item">
+                <a class="navigation-link" href="guarantee.html">Гарантия</a>
+              </li>
+              <li class="navigation-item">
+                <a class="navigation-link" href="contacts.html">Контакты</a>
+              </li>
+            </ul>
+          </nav>
       </header>
 
       <main class="main-inner">
-        <header class="inner-header">
           <h1 class="inner-header-title">Моноподы для селфи</h1>
           <ul class="breadcrumbs">
             <li class="breadcrumbs-item">
@@ -62,16 +62,13 @@
               <a class="breadcrumbs-link">Моноподы для селфи</a>
             </li>
           </ul>
-        </header>
 
-        < class="catalog-products">
-        <h2 class="filter-title">Фильтр:</h2>
-        <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
-
-
-          <fieldset class="catalog-filter-group">
-            <legend class="catalog-filter-title">Цвет</legend>
-            <ul class="catalog-filter-list">
+        <section class="catalog-products">
+          <h2 class="filter-title">Фильтр:</h2>
+          <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
+            <fieldset class="catalog-filter-group">
+              <legend class="catalog-filter-title">Цвет</legend>
+              <ul class="catalog-filter-list">
               <li class="catalog-filter-item">
                 <label class="control">
                   <input class="control-input" type="checkbox" name="black" checked>
@@ -108,11 +105,11 @@
                 </label>
               </li>
             </ul>
-          </fieldset>
+            </fieldset>
 
-          <fieldset class="catalog-filter-group">
-            <legend class="catalog-filter-title">Bluetooth</legend>
-            <ul class="catalog-filter-list">
+            <fieldset class="catalog-filter-group">
+              <legend class="catalog-filter-title">Bluetooth</legend>
+              <ul class="catalog-filter-list">
               <li class="catalog-filter-item">
                 <label class="control">
                   <input class="control-input" type="radio" name="product-group" value="Yes" checked>
@@ -132,6 +129,7 @@
 
           <button class="button" type="submit">Показать</button>
         </form>
+        </section>
 
           <h2 class="filter-title">Сортировка:</h2>
           <select class="select-control" aria-label="Сортировка">
