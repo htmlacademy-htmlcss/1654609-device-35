@@ -10,10 +10,11 @@
     <header class="page-header">
 
       <a class="navigation-logo" href="index.html">
-        <img class="page-header-logo" alt="Логотип «Девайс»." src="index.html">
+        <img class="page-header-logo" alt="Логотип «Девайс»." src="images/logo.svg" width:="145px" height="36px">
       </a>
       <form class="search" action="https://echo.htmlacademy.ru/" method="post">
 
+       <!-- не понимаю как вставить иконку поиска в инпут-->
         <input class="field" placeholder="Поиск по сайту" type="text" name="search" id="search">
 
         <a class="button button-search" href="#">Найти</a>
@@ -21,12 +22,15 @@
 
       <ul class="navigation-list navigation-user">
         <li class="navigation-item">
+          <img class="user-icon" alt="Иконка личного кабинета" src="images/icons/user.svg" width:="13px" height="12px">
           <a class="navigation-link" href="#">Вход</a>
         </li>
         <li class="navigation-item">
+          <img class="compare-icon" alt=" Иконка меню Сравнить" src="images/icons/compare.svg" width:="10px" height="12px">
           <a class="navigation-link" href="#">Сравнить</a>
         </li>
-        </li class="navigation-item">
+        <li class="navigation-item">
+        <img class="cart-icon" alt="Иконка корзины" src="images/icons/cart.svg" width:="16px" height="14px">
         <a class="navigation-link" href="#">Корзина</a>
         </li>
       </ul>
@@ -35,6 +39,7 @@
         <ul class="navigation-list">
           <li class="navigation-item">
             <a class="navigation-link" href="catalog.html">Каталог товаров</a>
+            <img class="catalog-icon" alt="Иконка каталога" src="images/icons/plus.svg" width:="50px" height="50px">
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="delivery.html">Доставка</a>
@@ -52,12 +57,14 @@
     <main class="main-index">
       <h1 class="visually-hidden">«Девайс»</h1>
       <section class="banner-photo">
-        <img class="slider-image" src="" alt="Фото товара">
+        <img class="slider-image" src="images/pictures/slider-1.png" alt="Фото товара" width:="560px" height="560px">
         <button class="slider-button slider-prev" type="button">
+          <img class="arrow-slider-icon" alt="Иконка слайдера" src="images/icons/arrow-left.svg" width:="20px" height="60px">
           <span class="visually-hidden">Предыдущее фото</span>
         </button>
         <button class="slider-button slider-next" type="button">
           <span class="visually-hidden">Следующее фото</span>
+          <img class="arrow-slider-icon" alt="Иконка слайдера" src="images/icons/arrow-right.svg" width:="20px" height="60px">
         </button>
 
         <ol class="slider-pagination">
@@ -101,38 +108,41 @@
         <ul class="product-list">
           <li class="product-item">
             <a class="product-link" href="product.html">
-              <img class="product-image" src="" alt="">
+              <!--в макете картинки идут с десятичными числами, я поставила целые, или надо как в макете?-->
+              <img class="product-image" src="images/pictures/virtual.svg" alt="Очки виртуальной реальности" width:="97px" height="55px">
+              <!--надо ли было ставить с фоном квадратным? или фон сделаем на CSS?-->
               <h3 class="product-title">Виртуальная реальность</h3>
             </a>
           </li>
-          <--! можно ли подписи ставить не заголвоком, а тегом p? -->
+
             <li class="product-item">
               <a class="product-link" href="product.html">
-                <img class="product-image" src="" alt="">
+                <img class="product-image" src="images/pictures/monopod.svg" alt="Монопод для селфи" width:="86px" height="117px">
+                <!--мне кажется тут alt у картинок не нужен, так как подписи итак иллюстрируют то, что изображено-->
                 <h3 class="product-title">Моноподы для селфи</h3>
               </a>
             </li>
             <li class="product-item">
               <a class="product-link" href="product.html">
-                <img class="product-image" src="" alt="">
+                <img class="product-image" src="images/pictures/camera.svg" alt="Камера" width:="71px" height="87px">
                 <h3 class="product-title">Экшн-камеры</h3>
               </a>
             </li>
             <li class="product-item">
               <a class="product-link" href="product.html">
-                <img class="product-image" src="" alt="">
+                <img class="product-image" src="images/pictures/fitness-braslet.svg" alt="Фитнес-браслет" width:="107px" height="65px">
                 <h3 class="product-title">Фитнес-браслеты</h3>
               </a>
             </li>
             <li class="product-item">
               <a class="product-link" href="product.html">
-                <img class="product-image" src="" alt="">
+                <img class="product-image" src="images/pictures/smart-watch.svg" alt="Умные часы" width:="56px" height="98px">
                 <h3 class="product-title">Умные часы</h3>
               </a>
             </li>
             <li class="product-item">
               <a class="product-link" href="product.html">
-                <img class="product-image" src="" alt="">
+                <img class="product-image" src="images/pictures/quadrocopters.svg" alt="Квадрокоптер" width:="132px" height="69px">
                 <h3 class="product-title">Квадрокоптеры</h3>
               </a>
             </li>
@@ -150,7 +160,7 @@
             <p class="services-decription">Мы с удовольствием доставим ваш товар прямо
               к вашему подъезду совершенно бесплатно! Ведь
               мы неплохо заработаем, поднимая его на ваш этаж.</p>
-            <img class="services-delivery-image" src="" alt="">
+            <img class="services-delivery-image" src="images/pictures/delivery-man.svg" alt="Человек доставляет посылку" width:="136px" height="164px">
           </li>
           <li services-item>
             <button class="button button-guarantee" type="button">
@@ -178,8 +188,10 @@
 
       <section class="special-delivery">
         <button class="button button-special-delivery" type="button">
+          <img class="special-delivery-image" src="images/pictures/delivery-car.svg" alt="Машина доставки" width:="47px" height="31px">
           <span class="special-delivery">Доставим редкий товар под заказ</span>
-          <img class="sspecial-delivery-image" src="" alt="">
+          <!--иконку эту я должна была выгружать без эллипса или все верно?-->
+          <img class="info-delivery-image" src="images/icons/icon-info.svg" alt="Иконка информации" width:="40px" height="40px">
       </section>
 
       <section class="about">
@@ -228,7 +240,8 @@
             <span class="newsletter-button">Подписаться</span>
           </button>
         </form>
-        <img class="icon-check" src="" alt="">
+        <!--этот блок не надо как-либо обернуть в один блок? или просто позже поставим их рядом?-->
+        <img class="icon-check" src="images/icons/tick-big.svg" alt="Иконка галочки" width:="14px" height="14px">
         <p class="description">Это бесплатно</p>
       </section>
     </main>
@@ -237,7 +250,7 @@
 
       <section class="footer-adress">
         <h2 class="visually-hidden">Контакты</h2>
-        <img class="footer-adress-logo" src="" alt="Логотип «Девайс».">
+        <img class="footer-adress-logo" src="images/logo-yellow.svg" alt="Логотип «Девайс»." width:="145px" height="36px">
         <address class="footer-adress">
           <p class="about-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
         </address>
@@ -262,16 +275,20 @@
         <ul class="footer-social-list">
           <li class="footer-social-item">
             <a class="button" href="https://t.me/htmlacademy">
+              <img class="footer-social-logo" src="images/tg.svg" alt="Логотип Telegram." width:="13px" height="11px">
               <span class="visually-hidden">Telegram</span>
             </a>
           </li>
           <li class="footer-social-item">
             <a class="button" href="https://www.youtube.com/user/htmlacademyru">
+              <!--иконки соц сетей надо было выгружать с эллипсом или без?-->
+              <img class="footer-social-logo" src="images/youtube.svg" alt="Логотип Youtube." width:="16px" height="10px">
               <span class="visually-hidden">Youtube</span>
             </a>
           </li>
           <li class="footer-social-item">
             <a class="button" href="https://twitter.com/htmlacademy_ru">
+              <img class="footer-social-logo" src="images/twitter.svg" alt="Логотип Twitter." width:="15px" height="14px">
               <span class="visually-hidden">Twitter</span>
             </a>
           </li>
