@@ -9,7 +9,7 @@
   <body>
     <header class="page-header">
       <a class="navigation-logo" href="index.html">
-        <img class="page-header-logo" alt="Логотип «Девайс»." src="index.html">
+        <img class="page-header-logo" alt="Логотип «Девайс»." src="images/logo.svg" width:="145px" height="36px">
       </a>
       <form class="search" action="https://echo.htmlacademy.ru/" method="post">
 
@@ -20,15 +20,18 @@
 
       <ul class="navigation-list navigation-user">
         <li class="navigation-item">
+          <img class="user-icon" alt="Иконка личного кабинета" src="images/icons/user.svg" width:="13px" height="12px">
           <a class="navigation-link" href="#">Коля Петухов</a>
         </li>
         <li class="navigation-item">
           <a class="navigation-link" href="#">Выйти</a>
         </li>
         <li class="navigation-item">
+          <img class="compare-icon" alt=" Иконка меню Сравнить" src="images/icons/compare.svg" width:="10px" height="12px">
           <a class="navigation-link" href="#">Сравнить</a>
         </li>
         </li class="navigation-item">
+        <img class="cart-icon" alt="Иконка корзины" src="images/icons/cart.svg" width:="16px" height="14px">
         <a class="navigation-link" href="#">Корзина</a>
         </li>
       </ul>
@@ -37,6 +40,7 @@
         <ul class="navigation-list">
           <li class="navigation-item">
             <a class="navigation-link" href="catalog.html">Каталог товаров</a>
+            <img class="catalog-icon" alt="Иконка каталога" src="images/icons/plus.svg" width:="50px" height="50px">
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="delivery.html">Доставка</a>
@@ -136,27 +140,32 @@
       <h2 class="filter-title">Сортировка:</h2>
       <select class="select-control" aria-label="Сортировка">
         <option value="popular">Популярное</option>
+        <!-тут надо уже ставить иконку?-->
+        <img class="arrow-small" src="images/icons/arrow-small.svg" alt="Иконка фильтра" width:="9px" height="6px">
         <option value="cheap">Дешёвое</option>
         <option value="expensive">Дорогое</option>
       </select>
       <a href="#" class="button button-up">
+        <img class="icon-up" src="images/icons/sort.svg" alt="Иконка сортировки" width:="11px" height="10px">
         <span class="visually-hidden">Вверх списка</span>
       </a>
       <a class="button button-down" href="#">
+        <!--тут мы в CSS поменяем расположение или стрелочку вниз тоже нажо выгрузить?-->
+        <img class="icon-up" src="images/icons/sort.svg" alt="Иконка сортировки" width:="11px" height="10px">
         <span class="visually-hidden">Вниз списка</span>
       </a>
 
       <ul class="product-list">
         <li class="product-card">
           <a class="product-card-link" href="product.html">
-            <img class="product-card-image" src="" alt="">
+            <img class="product-card-image" src="images/pictures/product-1.jpg" alt="Cелфи-палка c телефоном" width:="360px" height="380px">
             <h3 class="product-card-title">Любительская селфи-палка</h3>
             <p>500 ₽</p>
           </a>
         </li>
         <li class="product-card">
           <a class="product-card-link" href="#">
-            <img class="product-card-image" src="" alt="">
+            <img class="product-card-image" src="images/pictures/product-2.jpg" alt="Селфи-палка большая" width:="360px" height="380px">
             <h3 class="product-card-title">Профессиональная селфи-палка </h3>
             <p>1 500 ₽</p>
           </a>
@@ -164,7 +173,7 @@
         </li>
         <li class="product-card">
           <a class="product-card-link" href="#">
-            <img class="product-card-image" src="" alt="">
+            <img class="product-card-image" src="images/pictures/product-3.jpg" alt="Селфи-палка желтого цвета с камерой" width:="360px" height="380px">
             <h3 class="product-card-title">Непотопляемая селфи-палка</h3>
             <p>2 500 ₽</p>
           </a>
@@ -172,7 +181,7 @@
         </li>
         <li class="product-card">
           <a class="product-card-link" href="#">
-            <img class="product-card-image" src="" alt="">
+            <img class="product-card-image" src="images/pictures/product-4.jpg" alt="Манекен руки с установленным на ней телефоном" width:="360px" height="380px">
             <h3 class="product-card-title">Селфи-палка «Следуй за мной»</h3>
             <p>1500 ₽</p>
           </a>
@@ -214,7 +223,7 @@
 
       <section class="footer-adress">
         <h2 class="visually-hidden">Контакты</h2>
-        <img class="footer-adress-logo" src="" alt="Логотип «Девайс».">
+        <img class="footer-adress-logo" src="images/logo-yellow.svg" alt="Логотип «Девайс»." width:="145px" height="36px">
         <address class="footer-adress">
           <p class="about-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
         </address>
@@ -239,16 +248,19 @@
         <ul class="footer-social-list">
           <li class="footer-social-item">
             <a class="button" href="https://t.me/htmlacademy">
+              <img class="footer-social-logo" src="images/tg.svg" alt="Логотип Telegram." width:="13px" height="11px">
               <span class="visually-hidden">Telegram</span>
             </a>
           </li>
           <li class="footer-social-item">
             <a class="button" href="https://www.youtube.com/user/htmlacademyru">
+              <img class="footer-social-logo" src="images/youtube.svg" alt="Логотип Youtube." width:="16px" height="10px">
               <span class="visually-hidden">Youtube</span>
             </a>
           </li>
           <li class="footer-social-item">
             <a class="button" href="https://twitter.com/htmlacademy_ru">
+              <img class="footer-social-logo" src="images/twitter.svg" alt="Логотип Twitter." width:="15px" height="14px">
               <span class="visually-hidden">Twitter</span>
             </a>
           </li>
