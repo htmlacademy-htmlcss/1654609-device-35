@@ -43,6 +43,8 @@ body {
 .page-header {
   color: #000000;
   background-color: #FFE17F;
+  width: 1160px;
+  margin: 0 140px;
 }
 
 .navigation-link-user {
@@ -562,4 +564,32 @@ body {
 
 html {
   height: 100%;
+}
+.main-container {
+  flex-grow: 1;
+}
+
+.inner-header {
+  width: 1080px;
+  margin-left: 200px;
+  margin-right: 160px;
+}
+
+.catalog-products {
+  width: 1440px;
+  background-color: #F0F0F0;
+  display: flex;
+}
+
+.catalog-filter {
+  width: 320px;
+  margin-right: 0;
+}
+
+.catalog-right-column {
+  width: 840px;
+}
+
+.product-list {
+  flex-direction: column;
 }
