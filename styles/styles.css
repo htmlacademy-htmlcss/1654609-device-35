@@ -22,6 +22,9 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
 
 body {
   margin: 0;
@@ -562,9 +565,7 @@ body {
   text-decoration: none;
 }
 
-html {
-  height: 100%;
-}
+
 .main-container {
   flex-grow: 1;
 }
@@ -591,5 +592,5 @@ html {
 }
 
 .product-list {
-  flex-direction: column;
+  flex-wrap: wrap;
 }
