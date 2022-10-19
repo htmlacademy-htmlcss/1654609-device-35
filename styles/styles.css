@@ -729,6 +729,8 @@ body {
   text-transform: uppercase;
 }
 
+
+
 .product-card-link {
   font-weight: 700;
   line-height: 20px;
@@ -813,20 +815,17 @@ body {
   width: 1440px;
   background-color: #F0F0F0;
   display: flex;
+  flex-wrap: wrap;
 }
 
-.catalog-products {
-  width: 1440px;
-  background-color: #F0F0F0;
-  display: flex;
-}
 
 .catalog-right-column {
   width: 840px;
 }
 
-.product-list {
-  flex-wrap: wrap;
+
+.product-card {
+  margin: 40px 70px;
 }
 
 .visually-hidden {
