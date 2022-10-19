@@ -1,5 +1,5 @@
 @font-face {
-  font-family: â€œRalewayâ€;
+  font-family: "Raleway";
   font-style: normal;
   font-weight: 800;
   src: url("../fonts/raleway/raleway-800.woff2") format("woff2");
@@ -7,7 +7,7 @@
 }
 
 @font-face {
-  font-family: â€œRubikâ€;
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/rubik/rubik-400.woff2") format("woff2");
@@ -15,7 +15,7 @@
 }
 
 @font-face {
-  font-family: â€œRubikâ€;
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 700;
   src: url("../fonts/rubik/rubik-700.woff2") format("woff2");
@@ -502,7 +502,7 @@ body {
   display: flex;
   margin: 0 140px;
   width: 1160px;
-  margin-bottom: 56px;
+  padding-bottom: 56px;
 }
 
 .newsletter-form {
