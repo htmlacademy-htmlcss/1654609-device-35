@@ -112,89 +112,96 @@
       </header>
 
       <section class="catalog-products">
-        <h2 class="filter-title">Фильтр:</h2>
-        <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
-          <fieldset class="catalog-filter-group">
-            <legend class="catalog-filter-title">Цвет</legend>
-            <ul class="catalog-filter-list">
-              <li class="catalog-filter-item">
-                <label class="control">
-                  <input class="control-input" type="checkbox" name="black" checked>
-                  Черный
-                </label>
-              </li>
-              <li class="catalog-filter-item">
-                <label class="control">
-                  <input class="control-input" type="checkbox" name="White" checked>
-                  Белый
-                </label>
-              </li>
-              <li class="catalog-filter-item">
-                <label class="control">
-                  <input class="control-input" type="checkbox" name="blue">
-                  Синий
-                </label>
-              </li>
-              <li class="catalog-filter-item">
-                <label class="control">
-                  <input class="control-input" type="checkbox" name="red">
-                  Красный
-                </label>
-              </li>
-              <li class="catalog-filter-item">
-                <label class="control">
-                  <input class="control-input" type="checkbox" name="pink">
-                  Розовый
-                </label>
-              </li>
-            </ul>
-          </fieldset>
+        <div class="filter">
+          <h2 class="filter-title">Фильтр:</h2>
+          <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
+            <fieldset class="catalog-filter-group">
+              <legend class="catalog-filter-title">Цвет</legend>
+              <ul class="catalog-filter-list">
+                <li class="catalog-filter-item">
+                  <label class="control">
+                    <input class="control-input" type="checkbox" name="black" checked>
+                    Черный
+                  </label>
+                </li>
+                <li class="catalog-filter-item">
+                  <label class="control">
+                    <input class="control-input" type="checkbox" name="White" checked>
+                    Белый
+                  </label>
+                </li>
+                <li class="catalog-filter-item">
+                  <label class="control">
+                    <input class="control-input" type="checkbox" name="blue">
+                    Синий
+                  </label>
+                </li>
+                <li class="catalog-filter-item">
+                  <label class="control">
+                    <input class="control-input" type="checkbox" name="red">
+                    Красный
+                  </label>
+                </li>
+                <li class="catalog-filter-item">
+                  <label class="control">
+                    <input class="control-input" type="checkbox" name="pink">
+                    Розовый
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
 
-          <fieldset class="catalog-filter-group">
-            <legend class="catalog-filter-title">Bluetooth</legend>
-            <ul class="catalog-filter-list">
-              <li class="catalog-filter-item">
-                <label class="control">
-                  <input class="control-input" type="radio" name="product-group" value="Yes" checked>
-                  Есть
-                </label>
-              </li>
-              <li class="catalog-filter-item">
-                <label class="control">
-                  <input class="control-input" type="radio" name="product-group" value="No">
-                  Нет
-                </label>
-              </li>
-            </ul>
-          </fieldset>
+            <fieldset class="catalog-filter-group">
+              <legend class="catalog-filter-title">Bluetooth</legend>
+              <ul class="catalog-filter-list">
+                <li class="catalog-filter-item">
+                  <label class="control">
+                    <input class="control-input" type="radio" name="product-group" value="Yes" checked>
+                    Есть
+                  </label>
+                </li>
+                <li class="catalog-filter-item">
+                  <label class="control">
+                    <input class="control-input" type="radio" name="product-group" value="No">
+                    Нет
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+            <button class="button-submit" type="submit">Показать</button>
+          </form>
+        </div>
 
-          <button class="button-submit" type="submit">Показать</button>
-        </form>
-
+        <!--как расставить кнопки? обернуть в див?-->
         <div class="catalog-right-column">
-          <h2 class="filter-title">Сортировка:</h2>
-          <select class="select-control" aria-label="Сортировка">
-            <option value="popular">Популярное</option>
-            <svg width=“10" height=“7” fill=“none” xmlns=“http://www.w3.org/2000/svg”>
-              <path d=“m5 5.83 3.84-4.5c.25-.3.25-.8 0-1.1a.56.56 0 0 0-.9 0l-3.44 4-3.44-4a.56.56 0 0 0-.9
-                0c-.08.2-.16.4-.16.6 0 .2.08.4.16.5l3.85 4.5c.33.3.66.3.98 0Z” fill=“#000” />
-            </svg>
-            <option value="cheap">Дешёвое</option>
-            <option value="expensive">Дорогое</option>
-          </select>
-          <a href="#" class="button button-up">
-            <svg width="12" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="m6 0 5.5 10H.5" fill="#000" />
-            </svg>
-            <span class="visually-hidden">Вверх списка</span>
-          </a>
-          <a class="button button-down" href="#">
-            <svg width="12" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="m6 0 5.5 10H.5" fill="#000" />
-            </svg>
-            <span class="visually-hidden">Вниз списка</span>
-          </a>
-
+          <div class="sorting">
+            <div class="sorting-items">
+              <h2 class="filter-title">Сортировка:</h2>
+              <select class="select-control" aria-label="Сортировка">
+                <option value="popular">Популярное</option>
+                <svg width=“10" height=“7” fill=“none” xmlns=“http://www.w3.org/2000/svg”>
+                  <path d=“m5 5.83 3.84-4.5c.25-.3.25-.8 0-1.1a.56.56 0 0 0-.9 0l-3.44 4-3.44-4a.56.56 0 0 0-.9
+                    0c-.08.2-.16.4-.16.6 0 .2.08.4.16.5l3.85 4.5c.33.3.66.3.98 0Z” fill=“#000” />
+                </svg>
+                <option value="cheap">Дешёвое</option>
+                <option value="expensive">Дорогое</option>
+              </select>
+              <div class="button-up-down">
+                <a href="#" class="button button-up">
+                  <svg width="12" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="m6 0 5.5 10H.5" fill="#000" />
+                  </svg>
+                  <span class="visually-hidden">Вверх списка</span>
+                </a>
+                <a class="button button-down" href="#">
+                  <svg width="12" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="m6 0 5.5 10H.5" fill="#000" />
+                  </svg>
+                  <span class="visually-hidden">Вниз списка</span>
+                </a>
+              </div>
+            </div>
+          </div>
           <ul class="product-list">
             <li class="product-card">
               <a class="product-card-link" href="product.html">
