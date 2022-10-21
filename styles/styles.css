@@ -44,10 +44,12 @@ body {
   margin: 0 0 0 60px;
 }
 
+
 .page-header {
   color: #000000;
   background-color: #FFE17F;
   width: 1160px;
+  height: 300px;
   margin: 20px 140px 0 140px;
 }
 
@@ -122,7 +124,8 @@ body {
   display: flex;
   width: 1160px;
   justify-content: space-between;
-  margin: 0 140px 70px 140px;
+  margin: -150px 140px 70px 140px;
+
 }
 
 .product-main-title {
@@ -199,55 +202,97 @@ body {
 .catalog {
   width: 1160px;
   margin: 0 140px;
+  margin-bottom: 70px;
+}
+
+.catalog-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 160px;
+  margin-bottom: 32px;
+  background-color: #FFE17F;
+}
+
+.product-list-catalog {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style-type: none;
+  margin: 0;
+  background-color:#FFFFFF;
+
 }
 
 .product-list {
   display: flex;
+  flex-wrap: wrap;
+  row-gap: 44px;
+  column-gap: 40px ;
   justify-content: space-between;
   list-style-type: none;
   margin: 0;
   margin-bottom: 70px;
-  padding: 0;
+  padding: 70px 40px 0;
+  background-color:#FFFFFF;
 
 }
 
-.product-item {
+.product-item-catalog{
   width: 160px;
-  height: 160px;
-  background-color: #FFE17F;
-  margin-bottom: 32px;
+  height: 250px;
+
+  margin-bottom: 70px;
 }
 
-.product-title {
+.product-title-catalog {
   font-family: "Raleway", "Arial", sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 18px;
   line-height: 24px;
+  height: 60px;
   color: #000000;
   margin: 0;
+
 }
 
-.product-link {
+.product-link-catalog {
   text-decoration: none;
 }
 
 .services {
+  display: flex;
+  justify-content: space-between;
   background-color: #F0F0F0;
   width: 1440px;
+  height: 290px;
   margin: 0;
-  bottom: 0;
+  padding: 0;
   margin-bottom: 70px;
+  margin-top: 170px;
 }
-/* Почему тут padding а не margin?*/
-.services-list {
+
+.services-list-block {
   width: 1160px;
-  margin: 0 140px;
+  display: flex;
+  justify-content: space-between;
+  margin: -100px 140px 72px 140px;
+}
+
+.services-list {
+  display: flex;
+  flex-direction: column;
+  width: 290px;
+  margin: 0;
+  margin-right: 116px;
   list-style-type: none;
   padding-bottom: 72px;
 }
 
 .services-title {
+  width: 450px;
   margin: 0;
   margin-bottom: 34px;
   padding: 0;
@@ -255,6 +300,7 @@ body {
 
 
 .services-description {
+  width: 450px;
   margin: 0;
   padding: 0;
 }
@@ -262,16 +308,17 @@ body {
 .text-block {
   max-width: 450px;
   margin-top: 72.5px;
-
+  display: none;
 }
 
-.services-item {
+.services-item-delivery {
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 0;
   gap: 116px;
 }
+
 
 .button-delivery {
   font-family: "Raleway", "Arial", sans-serif;
@@ -283,6 +330,7 @@ body {
   text-transform: uppercase;
   background-color: #000000;
   color: #FFE17F;
+  margin-bottom: 35px;
 }
 
 .button-guarantee {
@@ -295,6 +343,7 @@ body {
   text-transform: uppercase;
   background-color: #FFE17F;
   color: #000000;
+  margin-bottom: 35px;
 }
 
 .button-credit {
@@ -312,7 +361,6 @@ body {
 
 
 .special-delivery {
-  background: #F0F0F0;
   width: 1160px;
   height: 100px;
   margin: 0 140px;
@@ -320,8 +368,10 @@ body {
 }
 
 .button-special-delivery {
+  background-color: #F0F0F0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 1160px;
   height: 100px;
   margin: 0;
@@ -342,8 +392,25 @@ body {
   color: #000000;
 }
 
+.button-car {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 125px;
+  height: 100px;
+  background-color: #FFE17F;
+}
+
+.info-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 125px;
+  height: 100px;
+}
+
 .about-title {
-  font-family: â€œRalewayâ€, â€œArialâ€, sans-serif;
+  font-family: "Raleway", "Arial" sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 50px;
@@ -597,6 +664,9 @@ body {
 }
 
 .footer-social-item {
+  display: flex;
+ justify-content: center;
+ align-items: center;
   width: 40px;
   height: 40px;
   margin-right: 15px;
@@ -615,7 +685,13 @@ body {
 }
 /* как поставить отступ у телефона и расположить лого академии к левому краю?*/
 
+.footer-contacts {
+  display: flex;
+  flex-direction: column;
+}
+
 .footer-contacts-phone {
+
   font-style: normal;
   font-size: 16px;
   line-height: 20px;
@@ -624,6 +700,8 @@ body {
 }
 
 .htmlacademy-link {
+  display: inline-flex;
+  justify-content: flex-end;
 
 }
 
@@ -810,7 +888,7 @@ body {
   flex-grow: 1;
 }
 
-
+/* Тут делать на гридах? не трогать карточки вообще?*/
 .catalog-products {
   width: 1440px;
   background-color: #F0F0F0;
@@ -819,13 +897,14 @@ body {
 }
 
 
+
 .catalog-right-column {
   width: 840px;
 }
 
 
 .product-card {
-  margin: 40px 70px;
+  width: 360px;
 }
 
 .visually-hidden {
