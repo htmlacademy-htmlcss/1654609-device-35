@@ -53,6 +53,15 @@ body {
   margin: 20px 140px 0 140px;
 }
 
+.page-header-catalog {
+  color: #000000;
+  background-color: #FFE17F;
+  width: 1160px;
+  height: 186px;
+  margin: 20px 140px 0 140px;
+}
+
+
 .navigation-logo {
   margin-bottom: 30px;
 }
