@@ -129,6 +129,19 @@ body {
   text-transform: uppercase;
 }
 
+.catalog-menu {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-link-catalog {
+  padding: 0;
+  margin-left: 0;
+  padding-right: 10px;
+}
+
+
 .first-line-menu {
   display: flex;
   width: 1040px;
