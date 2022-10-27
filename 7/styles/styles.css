@@ -27,7 +27,7 @@ html {
 }
 
 body {
-  margin: 0;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   width: 1440px;
@@ -127,13 +127,10 @@ body {
   background-color: #FFE17F;
   text-decoration: none;
   text-transform: uppercase;
+  display: flex;
+  align-items: center;
 }
 
-.catalog-menu {
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
 
 .navigation-link-catalog {
   padding: 0;
@@ -152,7 +149,7 @@ body {
   display: flex;
   width: 1160px;
   justify-content: space-between;
-  margin: -135px 140px 70px 140px;
+  margin: -135px auto 70px;
 
 }
 
@@ -311,7 +308,7 @@ body {
   width: 1160px;
   display: flex;
   justify-content: space-between;
-  margin: -100px 140px 72px 140px;
+  margin: -100px auto 72px;
 }
 
 .services-list {
