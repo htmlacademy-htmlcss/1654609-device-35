@@ -120,15 +120,18 @@ body {
   padding: 10px 20px;
   text-align: center;
 }
+
 .search__button button:hover {
   background-color: #000;
   color: #fff;
   border-top-right-radius: 13px;
   border-bottom-right-radius: 13px;
 }
+
 .search__button button:active {
   color: rgba(255, 255, 255, 0.3);
 }
+
 .search__button button:focus {
   box-shadow: 0 0 0 2px #AF4FFF;
 }
@@ -269,7 +272,7 @@ body {
   justify-content: space-between;
   padding-left: 30px;
   position: absolute;
-  top: 40%;
+  top: 60%;
 
 }
 
@@ -277,6 +280,7 @@ body {
   background-color: inherit;
   border: none;
 }
+
 /*почему у стрелки зона ссылки ниже? */
 .slider-button:hover {
   opacity: 0.6;
@@ -300,8 +304,9 @@ body {
 /*как вывести назад? */
 .slider__number {
   position: absolute;
+  z-index: ;
   left: 67%;
-  bottom: 70%;
+  bottom: 55%;
   font-weight: 700;
   font-size: 180px;
   line-height: 30px;
@@ -395,6 +400,8 @@ body {
 }
 
 .advantages-title {
+  margin: 0;
+  padding-top: 15px;
   font-size: 36px;
   line-height: 30px;
   color: #000000;
@@ -426,7 +433,7 @@ body {
   background-color: #FFC700;
 }
 
-.product-link-catalog:active  {
+.product-link-catalog:active {
   opacity: 0.3;
   background-color: #FFC700;
 }
@@ -504,7 +511,9 @@ body {
 .services-list-block {
   width: 1160px;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   margin: -100px auto 72px;
 }
 
@@ -519,20 +528,7 @@ body {
   padding-top: 84px;
 }
 
-.services-title {
-  width: 450px;
-  margin: 0;
-  margin-bottom: 34px;
-  padding: 0;
-}
-
-
-.services-description {
-  width: 450px;
-  margin: 0;
-  padding: 0;
-}
-
+/* не понимаю как ставить полосу?*/
 .text-block-delivery::before {
   content: "";
   position: absolute;
@@ -543,24 +539,23 @@ body {
   background-color: #000;
 }
 
+.services-title {
+  width: 450px;
+  margin: 0;
+  margin-bottom: 34px;
+  padding: 0;
+}
+
+.services-description {
+  width: 450px;
+  margin: 0;
+  padding: 0;
+}
 
 .text-block {
   max-width: 450px;
   margin-top: 72.5px;
   display: none;
-}
-
-.services-item-delivery {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  position: relative;
-  padding: 0;
-  gap: 116px;
-}
-
-.services-item-delivery:not(:last-child) {
-  margin-bottom: 56px;
 }
 
 .button-offer {
@@ -569,12 +564,16 @@ body {
   transition: 0.7s;
   text-align: center;
 }
-.button-offer:hover, .button-offer:focus {
+
+.button-offer:hover,
+.button-offer:focus {
   padding-left: 50px;
   transition: 0.7s;
   color: #FFE17F;
 }
-.button-offer:hover::after, .button-offer:focus::after {
+
+.button-offer:hover::after,
+.button-offer:focus::after {
   content: "";
   position: absolute;
   text-align: center;
@@ -591,22 +590,20 @@ body {
   box-shadow: 0 0 0 2px #AF4FFF;
 }
 
-.button-standart-active {
-  border: none;
-  width: 160px;
-  padding: 0 20px;
-  transition: 0.7s;
-  text-align: center;
-  color:#000000;
+/*не понимаю почему первая кнопка не работает */
+.button-active {
+  color: #FFC700;
+
 }
-.button-standart-active::after {
+
+.button-active::after {
   content: "";
   position: absolute;
   text-align: center;
   width: 280px;
   min-height: 40px;
   background-color: black;
-  top: -30%;
+  top: -20%;
   left: 0;
   right: 0;
   bottom: 0;
@@ -614,31 +611,37 @@ body {
   z-index: -1;
   transition: 0.5s;
 }
-.button-standart-active:active::after {
+
+.button-active:active::after {
   background-color: black;
 }
-.button-standart-active:focus::after {
-  background-color: black;
-  box-shadow: 0 0 0 311x #AF4FFF;
-}
-.button-standart-active:focus {
+
+.button-active:focus::after {
   background-color: black;
   box-shadow: 0 0 0 311x #AF4FFF;
 }
 
-
-.button-more {
-  display: block;
-  max-width: 220px;
-}
 
 .button-standart {
-  display: inline-block;
+  display: block;
   position: relative;
   vertical-align: middle;
   width: auto;
   text-align: center;
   z-index: 5;
+  margin-bottom: 35px;
+}
+
+.button-about {
+  max-width: 270px;
+  width: 210px;
+  padding: 0 5px;
+}
+
+.button-more {
+  max-width: 220px;
+  width: 210px;
+  padding: 0 5px;
 }
 
 .button-standart::after {
@@ -659,29 +662,16 @@ body {
   top: -30%;
   transition: 0.5s;
 }
+
 .button-standart:active::after {
   height: 40px;
   top: -30%;
   background: #ffcc33;
 }
+
 .button-standart:focus::after {
   border: 2px solid #AF4FFF;
 }
-
-.button-delivery {
-  font-family: "Raleway", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 21px;
-  text-align: center;
-  text-transform: uppercase;
-  background-color: #000000;
-  color: #FFE17F;
-  margin-bottom: 35px;
-}
-
-
 
 .special-delivery {
   width: 1160px;
@@ -712,6 +702,7 @@ body {
 .special-delivery:hover {
   cursor: pointer;
 }
+
 .special-delivery:active {
   cursor: pointer;
   opacity: 0.3;
@@ -882,6 +873,7 @@ body {
   width: 1160px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 64px 140px 144px 140px;
 }
 
@@ -890,8 +882,6 @@ body {
   align-items: center;
   position: relative;
 }
-
-
 
 .newsletter-text-description {
   width: 560px;
@@ -915,6 +905,7 @@ body {
 
 .newsletter-form-description {
   display: flex;
+  align-items: center;
   margin: 0 140px;
   width: 1160px;
   padding-bottom: 56px;
@@ -925,6 +916,7 @@ body {
   width: 810px;
 
 }
+
 .newsletter-form input {
   border: none;
   width: 550px;
@@ -935,6 +927,7 @@ body {
   line-height: 30px;
   border-bottom: 3px solid #C4C4C4;
 }
+
 .newsletter-form input:placeholder-shown {
   font-style: normal;
   font-weight: 400;
@@ -955,18 +948,21 @@ input::-ms-clear {
 .free {
   display: flex;
   flex-direction: row;
+  align-items: center;
   width: 160px;
   height: 30px;
-  margin: 0 140px;
+  margin: 0;
+  margin-left: 190px;
 }
 
 .description {
   width: 130px;
   margin: 0;
   padding: 0;
+  margin-left: 16px;
 }
 
-.form__button{
+.form__button {
   font-family: "Raleway", "Arial", sans-serif;
   font-style: normal;
   font-weight: 800;
@@ -982,6 +978,7 @@ input::-ms-clear {
 .newsletter-button {
   border: none;
 }
+
 .form__button {
   padding: 18px 39px;
   box-shadow: 0 0 0 3px #C4C4C4;
@@ -996,17 +993,32 @@ input::-ms-clear {
   align-items: flex-end;
   width: 1160px;
   margin: 0 auto;
-  padding: 62px;
+  padding: 61px;
 }
 
 .footer-adress {
+  display: flex;
+  flex-direction: column;
   font-style: normal;
   color: #FFFFFF;
   font-size: 16px;
   line-height: 20px;
   width: 240px;
   margin-right: 118px;
-  margin-top: 62px;
+}
+
+.footer-adress-text {
+  margin: 0;
+  padding: 0;
+}
+
+.footer-adress::after {
+  content: "";
+  padding-left: absolute;
+  width: 82px;
+  height: 7px;
+  background-color: #FFC700;
+  margin-top: 63px;
 }
 
 .footer-logo:hover {
@@ -1137,7 +1149,7 @@ input::-ms-clear {
 .htmlacademy-link {
   display: inline-flex;
   justify-content: flex-end;
-  color:#FFC700;
+  color: #FFC700;
 }
 
 .htmlacademy-link:hover {
@@ -1304,10 +1316,12 @@ input::-ms-clear {
   color: #000000;
   text-decoration: none;
 }
+
 .product-card-link:hover::before {
   opacity: 0.5;
   background-color: white;
 }
+
 .product-price {
   font-weight: 400;
   font-size: 18px;
@@ -1476,6 +1490,7 @@ input::-ms-clear {
 
   opacity: 0.6;
 }
+
 .navigation-link-user:active {
   opacity: 0.3;
 }
@@ -1498,6 +1513,7 @@ input::-ms-clear {
   display: flex;
   align-items: center;
 }
+
 .icon-catalog::after {
   content: "";
   display: block;
@@ -1515,12 +1531,4 @@ input::-ms-clear {
 
 .link-main:focus {
   box-shadow: 0 0 0 2px #AF4FFF;
-}
-
-
-/*с кнопками вообще не поняла */
-.button-standart::before {
-  position: absolute;
-  background: #FFE17F;
-  content: "";
 }
