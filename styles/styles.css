@@ -66,6 +66,73 @@ body {
   margin: 0 0 30px 60px;
 }
 
+.button__default {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.search {
+  flex-grow: 0;
+  flex-basis: 519px;
+  display: flex;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 18px;
+  position: relative;
+  z-index: 55;
+}
+
+.search__input-wrapper {
+  max-width: 359px;
+  flex-grow: 3;
+}
+
+/*как убрать обводку у инпута, чтобы оставить разделитетль с кнопкой */
+.search__input[type=search] {
+  min-width: 160px;
+  width: 100%;
+  background: #FFE17F;
+  background-image: url("../images/icons/search.svg");
+  background-repeat: no-repeat;
+  background-position: 15px;
+  padding: 8px 0;
+  padding-left: 45px;
+  padding-right: 15px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  border-top-left-radius: 13px;
+  border-bottom-left-radius: 13px;
+}
+
+.search__button {
+  background-color: transparent;
+  max-width: 160px;
+  flex-grow: 1;
+}
+
+.search__button button {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  padding: 10px 20px;
+  text-align: center;
+}
+.search__button button:hover {
+  background-color: #000;
+  color: #fff;
+  border-top-right-radius: 13px;
+  border-bottom-right-radius: 13px;
+}
+.search__button button:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+.search__button button:focus {
+  box-shadow: 0 0 0 2px #AF4FFF;
+}
+
 .navigation-list-user {
   width: 497px;
   margin: 0;
@@ -73,10 +140,46 @@ body {
   margin-right: 0;
   list-style-type: none;
   display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 36px;
+  align-items: center;
+  margin-left: 26px;
+}
+
+.second-block-navigation {
+  display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
   gap: 36px;
+
 }
+
+.cart-button {
+  position: relative;
+  z-index: 5;
+}
+
+.cart-button::before {
+  content: "2";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: -14px;
+  background-color: #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+
 
 
 .navigation-menu {
@@ -107,10 +210,6 @@ body {
   text-decoration: none;
 }
 
-.search {
-  width: 517px;
-  margin-right: 26px;
-}
 
 
 .navigation-link-menu {
@@ -127,7 +226,7 @@ body {
   align-items: center;
 }
 
-.navigation-link-catalog {
+.link-main {
   font-family: "Raleway", "Arial", sans-serif;
   font-size: 18px;
   line-height: 30px;
@@ -161,6 +260,53 @@ body {
   justify-content: space-between;
   margin: -135px auto 70px;
 
+}
+
+.slider__container {
+  width: 530px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 30px;
+  position: absolute;
+
+  top: 60%;
+
+}
+
+.slider-button {
+  background-color: inherit;
+  border: none;
+}
+/*почему у стрелки зона ссылки ниже? */
+.slider-button:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.slider-button:active {
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.slider-button:focus {
+  box-shadow: 0 0 0 2px #AF4FFF;
+}
+
+.slider-next {
+  rotate: 180deg;
+}
+
+
+/*как вывести назад? */
+.slider__number {
+  position: absolute;
+  left: 67%;
+  bottom: 55%;
+  font-weight: 700;
+  font-size: 180px;
+  line-height: 30px;
+  color: #FFFFFF;
 }
 
 .product-main-title {
@@ -210,6 +356,33 @@ body {
   color: #000000;
 }
 
+.slider__dots {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  z-index: 155;
+}
+
+/*почему эллипс плющит */
+.slider__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  border: 2px solid #000;
+  background-color: inherit;
+}
+
+.slider__dot:not(:last-child) {
+  margin-right: 20px;
+}
+
+.slider__dot.active {
+  background-color: #000;
+}
+
+
 .button-standart {
   font-family: "Raleway", "Arial", sans-serif;
   font-weight: 800;
@@ -220,8 +393,6 @@ body {
   border: none;
   text-transform: uppercase;
   color: #000000;
-  background: #FFE17F;
-
 }
 
 .advantages-title {
@@ -256,9 +427,14 @@ body {
   background-color: #FFC700;
 }
 
+.product-link-catalog:active  {
+  opacity: 0.3;
+  background-color: #FFC700;
+}
+
 /*не рабоатет фокус */
 .product-link-catalog:focus {
-  border: 2px solid #AF4FFF;
+  box-shadow: 2px solid #AF4FFF;
 }
 
 
@@ -268,6 +444,7 @@ body {
   justify-content: space-between;
   list-style-type: none;
   margin: 0;
+  height: 250px;
   background-color: #FFFFFF;
 
 }
@@ -340,6 +517,7 @@ body {
   margin-right: 116px;
   list-style-type: none;
   padding-bottom: 72px;
+  padding-top: 84px;
 }
 
 .services-title {
@@ -356,6 +534,17 @@ body {
   padding: 0;
 }
 
+.text-block-delivery::before {
+  content: "";
+  position: absolute;
+  width: 7px;
+  min-height: 319px;
+  top: 13px;
+  left: 0;
+  background-color: #000;
+}
+
+
 .text-block {
   max-width: 450px;
   margin-top: 72.5px;
@@ -366,10 +555,119 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
+  position: relative;
   padding: 0;
   gap: 116px;
 }
 
+.services-item-delivery:not(:last-child) {
+  margin-bottom: 56px;
+}
+
+.button-offer {
+  width: 160px;
+  padding: 0 20px;
+  transition: 0.7s;
+  text-align: center;
+}
+.button-offer:hover, .button-offer:focus {
+  padding-left: 50px;
+  transition: 0.7s;
+  color: #FFE17F;
+}
+.button-offer:hover::after, .button-offer:focus::after {
+  content: "";
+  position: absolute;
+  text-align: center;
+  width: 280px;
+  min-height: 40px;
+  background-color: black;
+  top: -30%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 8px;
+  z-index: -1;
+  transition: 0.7s;
+  box-shadow: 0 0 0 2px #AF4FFF;
+}
+
+.button-standart-active {
+  border: none;
+  width: 160px;
+  padding: 0 20px;
+  transition: 0.7s;
+  text-align: center;
+  color:#000000;
+}
+.button-standart-active::after {
+  content: "";
+  position: absolute;
+  text-align: center;
+  width: 280px;
+  min-height: 40px;
+  background-color: black;
+  top: -30%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 8px;
+  z-index: -1;
+  transition: 0.5s;
+}
+.button-standart-active:active::after {
+  background-color: black;
+}
+.button-standart-active:focus::after {
+  background-color: black;
+  box-shadow: 0 0 0 311x #AF4FFF;
+}
+.button-standart-active:focus {
+  background-color: black;
+  box-shadow: 0 0 0 311x #AF4FFF;
+}
+
+
+.button-more {
+  display: block;
+  max-width: 220px;
+}
+
+.button-standart {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  width: auto;
+  text-align: center;
+  z-index: 5;
+}
+
+.button-standart::after {
+  content: "";
+  position: absolute;
+  height: 8px;
+  text-align: center;
+  background: #FFE17F;
+  top: 30%;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.button-standart:hover::after {
+  height: 40px;
+  top: -30%;
+  transition: 0.5s;
+}
+.button-standart:active::after {
+  height: 40px;
+  top: -30%;
+  background: #ffcc33;
+}
+.button-standart:focus::after {
+  border: 2px solid #AF4FFF;
+}
 
 .button-delivery {
   font-family: "Raleway", "Arial", sans-serif;
@@ -408,9 +706,20 @@ body {
 /*не понмаю как стилизовать вторую иконку, чтобы одновременно отрабатывали обе при ховере*/
 .button-special-delivery:hover .button-car {
   background-color: #FFC700;
+  cursor: pointer;
+}
+
+/*Почему курсор появляется только после фокуса? */
+.special-delivery:hover {
+  cursor: pointer;
+}
+.special-delivery:active {
+  cursor: pointer;
+  opacity: 0.3;
 }
 
 .button-special-delivery:focus {
+  cursor: pointer;
   box-shadow: 0 0 0 2px #AF4FFF;
 }
 
@@ -575,12 +884,18 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 64px 140px 144px 140px;
+}
 
+.newsletter-form {
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 
 
+
 .newsletter-text-description {
-  width: 553px;
+  width: 560px;
   margin: 0;
   padding: 0;
 }
@@ -606,9 +921,36 @@ body {
   padding-bottom: 56px;
 }
 
+/* как соединить кнопку и инпут?*/
 .newsletter-form {
   width: 810px;
-  margin-right: 190px;
+
+}
+.newsletter-form input {
+  border: none;
+  width: 550px;
+  background-color: inherit;
+  min-height: 55px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  border-bottom: 3px solid #C4C4C4;
+}
+.newsletter-form input:placeholder-shown {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: #444;
+  opacity: 0.5;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+.newsletter-form input:focus {
+  background-color: #DCDCDC;
 }
 
 .free {
@@ -625,7 +967,7 @@ body {
   padding: 0;
 }
 
-.newsletter-button {
+.form__button{
   font-family: "Raleway", "Arial", sans-serif;
   font-style: normal;
   font-weight: 800;
@@ -636,6 +978,14 @@ body {
   text-align: center;
   text-transform: uppercase;
   color: #000000;
+}
+
+.newsletter-button {
+  border: none;
+}
+.form__button {
+  padding: 18px 39px;
+  box-shadow: 0 0 0 3px #C4C4C4;
 }
 
 .page-footer {
@@ -684,7 +1034,6 @@ body {
 }
 
 
-
 .navigation-link-footer {
   font-family: "Raleway", "Arial", sans-serif;
   font-style: normal;
@@ -696,8 +1045,14 @@ body {
   text-transform: uppercase;
 }
 
-/*не понимаю как при ховере аоставить линию*/
 .navigation-link-footer:hover {
+  text-decoration: underline;
+  color: #FFC700;
+}
+
+.navigation-link-footer:active {
+  text-decoration: underline;
+  opacity: 0.3;
   color: #FFC700;
 }
 
@@ -731,9 +1086,18 @@ body {
   background: #FFC700;
 }
 
+.footer-social-item:active {
+  background: #FFC700;
+}
+
+
+.footer-social-item:active svg {
+  opacity: 0.3;
+}
+
 /*не работает фокус */
 .footer-social-item:focus {
-  box-shadow: 0 0 0 2px #AF4FFF;
+  color: 2px solid #AF4FFF;
 }
 
 .footer-social-item:nth-child(3n) {
@@ -774,12 +1138,11 @@ body {
 .htmlacademy-link {
   display: inline-flex;
   justify-content: flex-end;
-
+  color:#FFC700;
 }
 
-/*не работет ховер */
 .htmlacademy-link:hover {
-  fill: #FFFFFF;
+  color: #FFFFFF;
 }
 
 .htmlacademy-link:focus {
@@ -907,6 +1270,10 @@ body {
 .product-card {
   background-color: #FFFFFF;
   display: flex;
+  flex-basis: 360px;
+  flex-shrink: 0;
+  margin-bottom: 44px;
+  position: relative;
 }
 
 .product-card-content {
@@ -929,13 +1296,17 @@ body {
 }
 
 
+
 .product-card-link {
   font-weight: 700;
   line-height: 20px;
   color: #000000;
   text-decoration: none;
 }
-
+.product-card-link:hover {
+  opacity: 0.5;
+  background-color: white;
+}
 .product-price {
   font-weight: 400;
   font-size: 18px;
@@ -1101,8 +1472,11 @@ body {
 }
 
 .navigation-link-user:hover {
-  color: #000000;
+
   opacity: 0.6;
+}
+.navigation-link-user:active {
+  opacity: 0.3;
 }
 
 .navigation-link-user:focus {
@@ -1115,22 +1489,36 @@ body {
 }
 
 /*не понимаю как при ховере сделать иконку черной?*/
-.navigation-link-catalog:hover {
-  color: #000000;
+.link {
+  color: #000;
 }
 
-.navigation-link-catalog:focus {
+.link-main {
+  display: flex;
+  align-items: center;
+}
+.icon-catalog::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  color: #000000;
+  margin-left: 16px;
+
+}
+
+.link-main.active::after {
+
+}
+.link-main:hover::after {
+  fill: #000000;
+}
+
+.link-main:focus {
   box-shadow: 0 0 0 2px #AF4FFF;
 }
 
-.navigation-link-menu:hover {
-  color: #000000;
-  opacity: 0.6;
-}
-
-.navigation-link-menu:focus {
-  box-shadow: 0 0 0 2px #AF4FFF;
-}
 
 /*с кнопками вообще не поняла */
 .button-standart::before {
