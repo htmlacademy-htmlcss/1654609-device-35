@@ -592,7 +592,6 @@ body {
 .button-standart {
   display: block;
   position: relative;
-  vertical-align: middle;
   width: auto;
   text-align: center;
   z-index: 5;
