@@ -984,6 +984,17 @@ input::-ms-clear {
   box-shadow: 0 0 0 3px #C4C4C4;
 }
 
+.form__button:hover {
+  box-shadow: none;
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+
+.form__button:focus {
+  box-shadow: 0 0 0 2px #AF4FFF;
+}
+
 .page-footer {
   background-color: #444444;
 }
@@ -1355,8 +1366,6 @@ input::-ms-clear {
 }
 
 
-
-
 .product-price {
   font-weight: 400;
   font-size: 18px;
@@ -1542,12 +1551,12 @@ input::-ms-clear {
   cursor: pointer;
 }
 
-.navigation-item-menu:hover {
+.navigation-link-menu:hover {
   color: #000000;
   opacity: 0.6;
   cursor: pointer;
 }
-.navigation-item-menu:focus {
+.navigation-link-menu:focus {
   box-shadow: 0 0 0 2px #AF4FFF;
   cursor: pointer;
 }
