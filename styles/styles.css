@@ -526,14 +526,14 @@ body {
   padding-top: 84px;
 }
 
-/* не понимаю как ставить полосу?*/
+/* не понимаю как ставить полосу правильно?*/
 .text-block-delivery::before {
   content: "";
   position: absolute;
   width: 7px;
   min-height: 319px;
-  top: 1500px;
-  left: 500px;
+  top: 1165px;
+  left: 460px;
   background-color: #000;
 }
 
@@ -990,7 +990,7 @@ input::-ms-clear {
   color: #FFFFFF;
 }
 
-
+/*не работает фокус */
 .form__button:focus {
   box-shadow: 0 0 0 2px #AF4FFF;
 }
