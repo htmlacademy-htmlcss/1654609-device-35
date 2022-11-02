@@ -29,8 +29,13 @@ html {
 
 body {
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 1440px;
   min-height: 100%;
   font-family: "Rubik", "Arial", sans-serif;
@@ -51,7 +56,7 @@ body {
 }
 
 .page-header-menu {
-  margin-top: -16px;
+  margin-top: -20px;
 }
 
 .page-header-catalog {
@@ -64,7 +69,8 @@ body {
 
 
 .navigation-logo {
-  margin: 0 0 30px 60px;
+  margin: 0 0 0 60px;
+  padding: 0;
 }
 
 .button__default {
@@ -74,10 +80,17 @@ body {
 }
 
 .search {
-  flex-grow: 0;
-  flex-basis: 519px;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -ms-flex-preferred-size: 519px;
+      flex-basis: 519px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border: 2px solid black;
   border-radius: 18px;
   position: relative;
@@ -86,10 +99,11 @@ body {
 
 .search__input-wrapper {
   max-width: 359px;
-  flex-grow: 3;
+  -webkit-box-flex: 3;
+      -ms-flex-positive: 3;
+          flex-grow: 3;
 }
 
-/*как убрать обводку у инпута, чтобы оставить разделитетль с кнопкой */
 .search__input[type=search] {
   min-width: 160px;
   width: 100%;
@@ -107,12 +121,15 @@ body {
   border: none;
   border-top-left-radius: 13px;
   border-bottom-left-radius: 13px;
+  outline: none;
 }
 
 .search__button {
   background-color: transparent;
   max-width: 160px;
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .search__button button {
@@ -121,6 +138,7 @@ body {
   width: 100%;
   padding: 10px 20px;
   text-align: center;
+  border-left: 2px solid
 }
 
 .search__button button:hover {
@@ -135,7 +153,8 @@ body {
 }
 
 .search__button button:focus {
-  box-shadow: 0 0 0 2px #AF4FFF;
+  -webkit-box-shadow: 0 0 0 2px #AF4FFF;
+          box-shadow: 0 0 0 2px #AF4FFF;
 }
 
 .navigation-list-user {
@@ -144,18 +163,30 @@ body {
   padding: 0;
   margin-right: 0;
   list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 36px;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-left: 26px;
 }
 
 .second-block-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
-  flex-wrap: wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 36px;
 
 }
@@ -175,9 +206,15 @@ body {
   width: 20px;
   height: 20px;
   border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: stretch;
-  justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -186,11 +223,15 @@ body {
 
 
 .navigation-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 1040px;
   height: 50px;
   margin: 0 auto;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 
@@ -198,10 +239,18 @@ body {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 45px;
 }
 
@@ -213,8 +262,6 @@ body {
   text-decoration: none;
 }
 
-
-
 .navigation-link-menu {
   font-family: "Raleway", "Arial", sans-serif;
   font-size: 18px;
@@ -225,8 +272,12 @@ body {
   background-color: #FFE17F;
   text-decoration: none;
   text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .link-main {
@@ -239,8 +290,12 @@ body {
   background-color: #FFE17F;
   text-decoration: none;
   text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 0;
   margin-left: 0;
 }
@@ -252,27 +307,39 @@ body {
 
 
 .first-line-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 1040px;
   margin: 30px 60px;
 }
 
 .first-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 1160px;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: -135px auto 70px;
-
+  position: relative;
 }
 
 .slider__container {
   width: 530px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding-left: 30px;
   position: absolute;
-  top: 60%;
+  top: 40%;
 
 }
 
@@ -292,7 +359,8 @@ body {
 }
 
 .slider-button:focus {
-  box-shadow: 0 0 0 2px #AF4FFF;
+  -webkit-box-shadow: 0 0 0 2px #AF4FFF;
+          box-shadow: 0 0 0 2px #AF4FFF;
 }
 
 .slider-next {
@@ -300,16 +368,16 @@ body {
 }
 
 
-/*как вывести назад? */
 .slider__number {
   position: absolute;
-  left: 70%;
-  bottom: 55%;
+  left: 77%;
+  bottom: 85%;
   font-weight: 700;
   font-size: 180px;
   line-height: 30px;
   color: #FFFFFF;
 }
+
 
 .product-main-title {
   margin: 0;
@@ -331,9 +399,12 @@ body {
 .product-main-info {
   width: 560px;
   margin: 105px 140px 38px 40px;
+  z-index: 1;
 }
 
 .product-advantages-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   list-style-type: none;
   margin: 0;
@@ -360,20 +431,26 @@ body {
 
 .slider__dots {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: absolute;
   left: 0;
-  z-index: 155;
 }
 
-/*почему эллипс плющит */
 .slider__dot {
   width: 12px;
   height: 12px;
-  border-radius: 100%;
+  border-radius: 50%;
   border: 2px solid #000;
   background-color: inherit;
+  cursor: pointer;
+  padding: 0;
 }
 
 .slider__dot:not(:last-child) {
@@ -384,6 +461,26 @@ body {
   background-color: #000;
 }
 
+.slider__dot.active:hover {
+  opacity: 0.6;
+}
+
+.slider__dot.active:active {
+  opacity: 0.3;
+}
+
+.slider__dot:not(active):hover {
+  opacity: 0.6;
+}
+
+.slider__dot:not(active):active {
+  opacity: 0.3;
+}
+
+.slider__dot:focus {
+  -webkit-box-shadow: 0 0 2px #AF4FFF;
+          box-shadow: 0 0 2px #AF4FFF;
+}
 
 .button-standart {
   font-family: "Raleway", "Arial", sans-serif;
@@ -418,9 +515,15 @@ body {
 }
 
 .catalog-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 160px;
   height: 160px;
   margin-bottom: 32px;
@@ -436,16 +539,22 @@ body {
   background-color: #FFC700;
 }
 
-/*не рабоатет фокус */
 .product-link-catalog:focus {
-  box-shadow: 2px solid #AF4FFF;
+  -webkit-box-shadow: 0 0 2px  #AF4FFF;
+          box-shadow: 0 0 2px  #AF4FFF;
+          display: inline-block;
 }
 
 
 .product-list-catalog {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   list-style-type: none;
   margin: 0;
   height: 250px;
@@ -454,6 +563,7 @@ body {
 }
 
 .product-block {
+  display: -ms-grid;
   display: grid;
   row-gap: 44px;
   padding: 0;
@@ -463,11 +573,15 @@ body {
 
 .product-list {
   list-style-type: none;
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 360px 40px 360px;
   grid-template-columns: 360px 360px;
   margin: 70px 40px 0 40px;
   padding: 0;
-  column-gap: 40px;
+  -webkit-column-gap: 40px;
+     -moz-column-gap: 40px;
+          column-gap: 40px;
   row-gap: 44px;
 
 }
@@ -495,8 +609,12 @@ body {
 }
 
 .services {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background-color: #F0F0F0;
   width: 1440px;
   height: 290px;
@@ -508,16 +626,30 @@ body {
 
 .services-list-block {
   width: 1160px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: -100px auto 72px;
 }
 
 .services-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 290px;
   margin: 0;
   margin-right: 116px;
@@ -526,7 +658,6 @@ body {
   padding-top: 84px;
 }
 
-/* не понимаю как ставить полосу правильно?*/
 .text-block-delivery::before {
   content: "";
   position: absolute;
@@ -559,6 +690,8 @@ body {
 .button-offer {
   width: 160px;
   padding: 0 20px;
+  -webkit-transition: 0.7s;
+  -o-transition: 0.7s;
   transition: 0.7s;
   text-align: center;
 }
@@ -566,6 +699,8 @@ body {
 .button-offer:hover,
 .button-offer:focus {
   padding-left: 50px;
+  -webkit-transition: 0.7s;
+  -o-transition: 0.7s;
   transition: 0.7s;
   color: #FFE17F;
 }
@@ -584,8 +719,11 @@ body {
   bottom: 0;
   height: 8px;
   z-index: -1;
+  -webkit-transition: 0.7s;
+  -o-transition: 0.7s;
   transition: 0.7s;
-  box-shadow: 0 0 0 2px #AF4FFF;
+  -webkit-box-shadow: 0 0 0 2px #AF4FFF;
+          box-shadow: 0 0 0 2px #AF4FFF;
 }
 
 
@@ -593,6 +731,7 @@ body {
   display: block;
   position: relative;
   width: auto;
+  background: transparent;
   text-align: center;
   z-index: 5;
   margin-bottom: 35px;
@@ -620,12 +759,16 @@ body {
   left: 0;
   right: 0;
   z-index: -1;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
   transition: 0.5s;
 }
 
 .button-standart:hover::after {
   height: 40px;
   top: -30%;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
   transition: 0.5s;
 }
 
@@ -656,6 +799,8 @@ body {
   bottom: 0;
   height: 8px;
   z-index: -1;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
   transition: 0.5s;
 }
 
@@ -665,12 +810,14 @@ body {
 
 .button-active:focus::after {
   background-color: black;
-  box-shadow: 0 0 0 311x #AF4FFF;
+  -webkit-box-shadow: 0 0 0 311x #AF4FFF;
+          box-shadow: 0 0 0 311x #AF4FFF;
 }
 
 .button-active:focus {
   background-color: black;
-  box-shadow: 0 0 0 311x #AF4FFF;
+  -webkit-box-shadow: 0 0 0 311x #AF4FFF;
+          box-shadow: 0 0 0 311x #AF4FFF;
 }
 
 .special-delivery {
@@ -682,9 +829,15 @@ body {
 
 .button-special-delivery {
   background-color: #F0F0F0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 1160px;
   height: 100px;
   margin: 0;
@@ -692,25 +845,30 @@ body {
   border: none;
 }
 
-/*не понмаю как стилизовать вторую иконку, чтобы одновременно отрабатывали обе при ховере*/
 .button-special-delivery:hover .button-car {
   background-color: #FFC700;
   cursor: pointer;
 }
 
-/*Почему курсор появляется только после фокуса? */
-.special-delivery:hover {
+.button-special-delivery:hover {
   cursor: pointer;
 }
 
-.special-delivery:active {
+.button-special-delivery:active {
   cursor: pointer;
   opacity: 0.3;
 }
 
 .button-special-delivery:focus {
   cursor: pointer;
-  box-shadow: 0 0 0 2px #AF4FFF;
+  -webkit-box-shadow: 0 0 0 2px #AF4FFF;
+          box-shadow: 0 0 0 2px #AF4FFF;
+}
+
+/*все равно не работает ховер как надо */
+.button-special-delivery:hover .info-button-icon {
+  color: #000000;
+  opacity: 100;
 }
 
 .special-delivery-text {
@@ -727,18 +885,30 @@ body {
 }
 
 .button-car {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 125px;
   height: 100px;
   background-color: #FFE17F;
 }
 
 .info-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 125px;
   height: 100px;
 }
@@ -781,13 +951,36 @@ body {
 }
 
 .index-columns {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 1160px;
   margin: 0 140px;
   margin-bottom: 70px;
 
 }
+
+.about-title::before {
+  content: "";
+  display: block;
+  width: 84px;
+  height: 7px;
+  background-color: #000;
+  margin-bottom: 40px;
+}
+
+.contacts-title::before {
+  content: "";
+  display: block;
+  width: 84px;
+  height: 7px;
+  background-color: #000;
+  margin-bottom: 40px;
+}
+
 
 .about {
   width: 520px;
@@ -871,15 +1064,25 @@ body {
 
 .newsletter-description {
   width: 1160px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 64px 140px 144px 140px;
 }
 
 .newsletter-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
 }
 
@@ -904,17 +1107,19 @@ body {
 }
 
 .newsletter-form-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0 140px;
   width: 1160px;
   padding-bottom: 56px;
 }
 
-/* как соединить кнопку и инпут?*/
 .newsletter-form {
   width: 810px;
-
 }
 
 .newsletter-form input {
@@ -926,6 +1131,25 @@ body {
   font-size: 18px;
   line-height: 30px;
   border-bottom: 3px solid #C4C4C4;
+  outline: none;
+}
+
+.newsletter-form input:-moz-placeholder-shown {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: #444;
+  opacity: 0.5;
+}
+
+.newsletter-form input:-ms-input-placeholder {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: #444;
+  opacity: 0.5;
 }
 
 .newsletter-form input:placeholder-shown {
@@ -946,9 +1170,16 @@ input::-ms-clear {
 }
 
 .free {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 160px;
   height: 30px;
   margin: 0;
@@ -968,31 +1199,40 @@ input::-ms-clear {
   font-weight: 800;
   font-size: 18px;
   line-height: 21px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
   text-transform: uppercase;
   color: #000000;
 }
 
 .newsletter-button {
+  margin: 0;
+  padding: 0;
   border: none;
 }
 
 .form__button {
   padding: 18px 39px;
-  box-shadow: 0 0 0 3px #C4C4C4;
+  -webkit-box-shadow: 0 0 0 3px #C4C4C4;
+          box-shadow: 0 0 0 3px #C4C4C4;
 }
 
 .form__button:hover {
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   background-color: #000000;
   color: #FFFFFF;
 }
 
-/*не работает фокус */
+
 .form__button:focus {
-  box-shadow: 0 0 0 2px #AF4FFF;
+  -webkit-box-shadow: 0 0 0 2px #AF4FFF;
+          box-shadow: 0 0 0 2px #AF4FFF;
 }
 
 .page-footer {
@@ -1000,17 +1240,28 @@ input::-ms-clear {
 }
 
 .page-footer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 1160px;
   margin: 0 auto;
   padding: 61px;
 }
 
 .footer-adress-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   font-style: normal;
   color: #FFFFFF;
   font-size: 16px;
@@ -1037,19 +1288,27 @@ input::-ms-clear {
   opacity: 0.6;
 }
 
-/*странно работает фокус*/
+
 .footer-logo:focus {
-  box-shadow: 0 0 0 2px #AF4FFF;
+  -webkit-box-shadow: 0 0 0 2px #AF4FFF;
+          box-shadow: 0 0 0 2px #AF4FFF;
 }
 
 
 .footer-info-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 444px;
 }
 
 .footer-navigation-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 35px;
   margin-bottom: 62px;
@@ -1080,23 +1339,35 @@ input::-ms-clear {
 
 .navigation-link-footer:focus {
   color: #FFFFFF;
-  box-shadow: 0 0 0 2px #AF4FFF;
+  -webkit-box-shadow: 0 0 0 2px #AF4FFF;
+          box-shadow: 0 0 0 2px #AF4FFF;
 }
 
 
 .footer-social-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
 .footer-social-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 40px;
   height: 40px;
   margin-right: 15px;
@@ -1117,7 +1388,7 @@ input::-ms-clear {
   opacity: 0.3;
 }
 
-/*не работает фокус */
+
 .footer-social-item:focus {
   color: 2px solid #AF4FFF;
 }
@@ -1134,8 +1405,13 @@ input::-ms-clear {
 
 .footer-contacts {
   width: 175;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .footer-contacts-phone {
@@ -1152,13 +1428,18 @@ input::-ms-clear {
 
 .footer-contacts-phone:focus {
   color: #FFFFFF;
-  box-shadow: 0 0 0 2px #AF4FFF;
+  -webkit-box-shadow: 0 0 0 2px #AF4FFF;
+          box-shadow: 0 0 0 2px #AF4FFF;
 }
 
 
 .htmlacademy-link {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   color: #FFC700;
 }
 
@@ -1168,7 +1449,8 @@ input::-ms-clear {
 
 .htmlacademy-link:focus {
   color: #FFC700;
-  box-shadow: 0 0 0 2px #AF4FFF;
+  -webkit-box-shadow: 0 0 0 2px #AF4FFF;
+          box-shadow: 0 0 0 2px #AF4FFF;
 }
 
 .navigation-link-user-login {
@@ -1212,17 +1494,24 @@ input::-ms-clear {
   cursor: pointer;
 }
 
-/*почему выделяется только главная, а другие ссылки нет? */
 .breadcrumbs-link:focus {
-  box-shadow: 0 0 0 2px #AF4FFF;
+  -webkit-box-shadow: 0 0 0 2px #AF4FFF;
+          box-shadow: 0 0 0 2px #AF4FFF;
   cursor: pointer;
 }
 
 .breadcrumbs {
   list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 16px;
   margin: 0;
   padding: 0;
@@ -1233,10 +1522,36 @@ input::-ms-clear {
 }
 
 .sorting-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+          align-items: center;
   margin: 20px 40px;
+}
+
+.sort__link {
+  text-decoration: none;
+  min-width: 50px;
+  display: block;
+  position: relative;
+  padding-right: 13px;
+  color: #000;
+}
+.sort__link::after {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 8px;
+  background-image: url("../images/icons/arrow-small.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .filter-title {
@@ -1267,6 +1582,23 @@ input::-ms-clear {
   color: #000000;
 }
 
+.button-sort {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-up-down {
+  display: flex;
+  flex-direction: row;
+}
+
+.button-icon-down {
+  rotate: 180deg;
+}
+
 .button-submit {
   font-family: "Raleway", "Arial", sans-serif;
   font-weight: 800;
@@ -1290,12 +1622,18 @@ input::-ms-clear {
 
 
 .product-card-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding-top: 32px;
 }
 
 .product-card-title {
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   margin: 0;
   padding: 0;
@@ -1303,14 +1641,18 @@ input::-ms-clear {
 }
 
 .product-price {
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   margin: 0;
   padding: 0;
 }
 
 .product-card__item {
-  flex-basis: 360px;
-  flex-shrink: 0;
+  -ms-flex-preferred-size: 360px;
+      flex-basis: 360px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   margin-bottom: 44px;
   position: relative;
 }
@@ -1333,7 +1675,8 @@ input::-ms-clear {
 
 /*почему не работает фокус */
 .product-card-link:focus {
-  box-shadow: 0 0 0 2px #AF4FFF;
+  -webkit-box-shadow: 0 0 0 2px #AF4FFF;
+          box-shadow: 0 0 0 2px #AF4FFF;
   cursor: pointer;
 }
 
@@ -1344,7 +1687,9 @@ input::-ms-clear {
   z-index: 25;
   top: 45%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .product-card-link {
@@ -1399,13 +1744,15 @@ input::-ms-clear {
   cursor: pointer;
 }
 
-/*Почему прр фокусе остается черная обводка???*/
 .button-show-more:focus {
-  box-shadow: 0 0 0 3px #AF4FFF;
+  -webkit-box-shadow: 0 0 0 3px #AF4FFF;
+          box-shadow: 0 0 0 3px #AF4FFF;
   cursor: pointer;
 }
 
 .pagination-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 0 40px;
   width: 760px;
@@ -1414,17 +1761,38 @@ input::-ms-clear {
 }
 
 .pagination {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
+.pagination-item-prev {
+  flex-grow: 1;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+.pagination-item-next {
+  flex-grow: 1;
+  text-align: right;
+  margin: 0;
+  padding: 0;
+}
 
 .pagination-item-title-disabled {
   color: #444444;
+  width: 100%;
   opacity: 0.3;
   font-family: "Raleway", "Arial", sans-serif;
   font-style: normal;
@@ -1432,16 +1800,21 @@ input::-ms-clear {
   font-size: 18px;
   line-height: 21px;
   text-transform: uppercase;
-  padding: 25px;
+  padding: 0 25px;
 }
 
-/*не понимаю как прижать к краю контейнера*/
 .pagination-next:hover .pagination-item-title {
-  background-color: #DCDCDC;
+  background-color: #EBEBEB;
 }
+
+.pagination-next:active .pagination-item-title {
+ background: #DCDCDC;
+}
+
 
 .pagination-next:focus .pagination-item-title {
-  box-shadow: 0 0 0 2px #AF4FFF;
+  -webkit-box-shadow: 0 0 0 2px #AF4FFF;
+          box-shadow: 0 0 0 2px #AF4FFF;
 }
 
 
@@ -1465,13 +1838,19 @@ input::-ms-clear {
 }
 
 .pagination-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  box-sizing: border-box;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 40px;
   height: 40px;
-  padding: 10px 16.5px;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
@@ -1483,7 +1862,6 @@ input::-ms-clear {
 .pagination-disabled {
   width: 128px;
   height: 71px;
-  margin-right: 145.5px;
 }
 
 
@@ -1491,19 +1869,23 @@ input::-ms-clear {
   width: 141px;
   height: 71px;
   text-decoration: none;
-  margin-left: 145.5px;
 }
 
 
 .main-container {
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .catalog-products {
   width: 1440px;
   background-color: #F0F0F0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .catalog-right-column {
@@ -1533,7 +1915,8 @@ input::-ms-clear {
 
 /*странно работает фокус*/
 .navigation-logo:focus {
-  box-shadow: 0 0 0 2px #AF4FFF;
+  -webkit-box-shadow: 0 0 0 2px #AF4FFF;
+          box-shadow: 0 0 0 2px #AF4FFF;
 }
 
 .navigation-link-user:hover {
@@ -1547,7 +1930,8 @@ input::-ms-clear {
 }
 
 .navigation-link-user:focus {
-  box-shadow: 0 0 0 2px #AF4FFF;
+  -webkit-box-shadow: 0 0 0 2px #AF4FFF;
+          box-shadow: 0 0 0 2px #AF4FFF;
   cursor: pointer;
 }
 
@@ -1557,35 +1941,52 @@ input::-ms-clear {
   cursor: pointer;
 }
 .navigation-link-menu:focus {
-  box-shadow: 0 0 0 2px #AF4FFF;
+  -webkit-box-shadow: 0 0 0 2px #AF4FFF;
+          box-shadow: 0 0 0 2px #AF4FFF;
   cursor: pointer;
 }
 
-/*не понимаю как при ховере сделать иконку черной?*/
 .link {
   color: #000;
 }
 
 .link-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.icon-catalog::after {
-  content: "";
-  display: block;
+.icon-catalog {
+  color: #000000;
+}
+.icon-styles {
+  border-radius: 50%;
   width: 50px;
   height: 50px;
-  border-radius: 100%;
-  color: #000000;
-  margin-left: 16px;
+  border: 2px solid #000000;
+  opacity: 0.3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon-styles:hover {
+  color:#000000;
+  opacity: 100;
+}
+
+.icon-styles:active {
 
 }
+
 
 .link-main:hover::after {
   fill: #000000;
 }
 
 .link-main:focus {
-  box-shadow: 0 0 0 2px #AF4FFF;
+  -webkit-box-shadow: 0 0 0 2px #AF4FFF;
+          box-shadow: 0 0 0 2px #AF4FFF;
 }

@@ -73,10 +73,11 @@
         <nav class="navigation-menu">
           <a class="list__link  link link-main" href="">
             <p class="navigation-title-catalog">Каталог товаров</p>
-            <svg class="icon-catalog" width="16" height="16" viewBox="0 0 16 16" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path d="M16 7H9V0H7V7H0V9H7V16H9V9H16V7Z" fill="black" />
-            </svg>
+            <div class="icon-styles">
+              <svg class="icon-catalog" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 7H9V0H7V7H0V9H7V16H9V9H16V7Z" fill="currentColor" />
+              </svg>
+            </div>
           </a>
           <ul class="navigation-list-menu">
             <li class="navigation-item-menu">
@@ -203,27 +204,24 @@
           <div class="sorting">
             <div class="sorting-items">
               <h2 class="filter-title">Сортировка:</h2>
-              <select class="select-control" aria-label="Сортировка">
-                <option value="popular">Популярное</option>
-                <svg width="10" height="7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="m5 5.83 3.84-4.5c.25-.3.25-.8 0-1.1a.56.56 0 0 0-.9 0l-3.44 4-3.44-4a.56.56 0 0 0-.9 0c-.08.2-.16.4-.16.6 0 .2.08.4.16.5l3.85 4.5c.33.3.66.3.98 0Z"
-                    fill="#000" />
-                </svg>
-                <option value="cheap">Дешёвое</option>
-                <option value="expensive">Дорогое</option>
-              </select>
+              <a href="#" class="sort__link text">
+                Популярные
+              </a>
               <div class="button-up-down">
                 <a href="#" class="button button-up">
-                  <svg width="12" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="m6 0 5.5 10H.5" fill="#000" />
-                  </svg>
+                  <div class="button-sort">
+                    <svg width="12" height="10" xmlns="http://www.w3.org/2000/svg">
+                      <path d="m6 0 5.5 10H.5" fill="black" />
+                    </svg>
+                  </div>
                   <span class="visually-hidden">Вверх списка</span>
                 </a>
                 <a class="button button-down" href="#">
-                  <svg width="12" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="m6 0 5.5 10H.5" fill="#000" />
-                  </svg>
+                  <div class="button-sort">
+                    <svg class="button-icon-down" width="12" height="10" xmlns="http://www.w3.org/2000/svg">
+                      <path d="m6 0 5.5 10H.5" fill="black" />
+                    </svg>
+                  </div>
                   <span class="visually-hidden">Вниз списка</span>
                 </a>
               </div>
@@ -291,7 +289,7 @@
 
             <div class="pagination-container">
               <ul class="pagination">
-                <li class="pagination-item">
+                <li class="pagination-item-prev">
                   <a class="pagination-link pagination-prev pagination-disabled">
                     <span class="pagination-item-title-disabled">Назад</span>
                   </a>
@@ -311,7 +309,7 @@
                 <li class="pagination-item">
                   <a class="pagination-link" href="#">5</a>
                 </li>
-                <li class="pagination-item">
+                <li class="pagination-item-next">
                   <a class="pagination-next" href="#">
                     <span class="pagination-item-title">Вперед</span>
                   </a>
