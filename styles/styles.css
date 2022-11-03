@@ -1532,7 +1532,9 @@ input::-ms-clear {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 20px 40px;
 }
 
@@ -1586,14 +1588,25 @@ input::-ms-clear {
 .button-sort {
   width: 30px;
   height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .button-up-down {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .button-icon-down {
@@ -1613,15 +1626,25 @@ input::-ms-clear {
 }
 
 
-.select-control {
-  font-family: "Raleway", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 16px;
-  line-height: 19px;
-  text-transform: uppercase;
+.select {
+
+  width: 140px;
 }
 
+.select-control {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  width: 100%;
+  background-color: #F0F0F0;
+  border: none;
+  background-image: url("../images/icons/arrow-small.svg");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  appearance: none;
+}
 
 fieldset {
   border: none;
@@ -1642,15 +1665,27 @@ fieldset {
 }
 
 .product-card__form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 200px;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .form-card__fieldset {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 0;
   margin: 0;
 }
@@ -1686,8 +1721,11 @@ fieldset {
 }
 
 .form-card__range-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   position: relative;
   width: 200px;
   margin-left: 10px;
@@ -1695,9 +1733,6 @@ fieldset {
 
 /*как отцентрировать сумму по тоглу? */
 .label-number span {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
@@ -1734,12 +1769,14 @@ fieldset {
 }
 
 .form-card__range-toggle:hover {
-  box-shadow: 0 0 0 2px #AF4FFF;
+  -webkit-box-shadow: 0 0 0 2px #AF4FFF;
+          box-shadow: 0 0 0 2px #AF4FFF;
 }
 
 .form-card__range-toggle:active,
 .form-card__range-toggle:focus {
-  box-shadow: 0 0 0 2px #AF4FFF;
+  -webkit-box-shadow: 0 0 0 2px #AF4FFF;
+          box-shadow: 0 0 0 2px #AF4FFF;
 }
 
 .toggle-min {
@@ -1756,9 +1793,6 @@ fieldset {
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
   color: rgba(0, 0, 0, 0.3);
   background-color: inherit;
   border: none;
@@ -1766,7 +1800,8 @@ fieldset {
 
 input.form-card__range-number:-webkit-outer-spin-button,
 input.fform-card__range-number::-webkit-inner-spin-button {
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   margin: 0;
   padding: 0;
 }
@@ -1796,7 +1831,8 @@ input.fform-card__range-number::-webkit-inner-spin-button {
 }
 
 .form-card__checkbox:focus + .checkbox__fake {
-  box-shadow: 0 0 0 2px #AF4FFF;
+  -webkit-box-shadow: 0 0 0 2px #AF4FFF;
+          box-shadow: 0 0 0 2px #AF4FFF;
 }
 
 .radio__fake {
@@ -1836,12 +1872,15 @@ input.fform-card__range-number::-webkit-inner-spin-button {
   border-radius: 100%;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   background-color: #000;
 }
 
 .form-card__radio:focus + .radio__fake {
-  box-shadow: 0 0 0 2px #AF4FFF;
+  -webkit-box-shadow: 0 0 0 2px #AF4FFF;
+          box-shadow: 0 0 0 2px #AF4FFF;
 }
 
 .form-card__label:not(:last-child) {
@@ -2009,14 +2048,18 @@ input.fform-card__range-number::-webkit-inner-spin-button {
 }
 
 .pagination-item-prev {
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   text-align: left;
   margin: 0;
   padding: 0;
 }
 
 .pagination-item-next {
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   text-align: right;
   margin: 0;
   padding: 0;
@@ -2111,8 +2154,13 @@ input.fform-card__range-number::-webkit-inner-spin-button {
 }
 .product-card__container {
   margin-left: 140px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .catalog-products {
@@ -2206,9 +2254,15 @@ input.fform-card__range-number::-webkit-inner-spin-button {
   height: 50px;
   border: 2px solid #000000;
   opacity: 0.3;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .icon-styles:hover {
@@ -2216,7 +2270,7 @@ input.fform-card__range-number::-webkit-inner-spin-button {
   opacity: 100;
 }
 
-.icon-styles:active {}
+
 
 
 .link-main:hover::after {
