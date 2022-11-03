@@ -1533,8 +1533,8 @@ input::-ms-clear {
   -ms-flex-pack: justify;
   justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin: 20px 40px;
 }
 
@@ -1592,11 +1592,11 @@ input::-ms-clear {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .button-up-down {
@@ -1605,8 +1605,8 @@ input::-ms-clear {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .button-icon-down {
@@ -1627,7 +1627,10 @@ input::-ms-clear {
 
 
 .select {
-
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 140px;
 }
 
@@ -1649,6 +1652,7 @@ input::-ms-clear {
 fieldset {
   border: none;
 }
+
 .filter-title-form {
   font-family: "Raleway", "Arial", sans-serif;
   font-style: normal;
@@ -1659,6 +1663,7 @@ fieldset {
   padding-top: 25px;
   margin: 0;
 }
+
 .product-card__form {
   padding: 0 60px;
   border: none;
@@ -1670,12 +1675,12 @@ fieldset {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 200px;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .form-card__fieldset {
@@ -1684,8 +1689,8 @@ fieldset {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   padding: 0;
   margin: 0;
 }
@@ -1725,7 +1730,7 @@ fieldset {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   position: relative;
   width: 200px;
   margin-left: 10px;
@@ -1770,13 +1775,13 @@ fieldset {
 
 .form-card__range-toggle:hover {
   -webkit-box-shadow: 0 0 0 2px #AF4FFF;
-          box-shadow: 0 0 0 2px #AF4FFF;
+  box-shadow: 0 0 0 2px #AF4FFF;
 }
 
 .form-card__range-toggle:active,
 .form-card__range-toggle:focus {
   -webkit-box-shadow: 0 0 0 2px #AF4FFF;
-          box-shadow: 0 0 0 2px #AF4FFF;
+  box-shadow: 0 0 0 2px #AF4FFF;
 }
 
 .toggle-min {
@@ -1801,7 +1806,7 @@ fieldset {
 input.form-card__range-number:-webkit-outer-spin-button,
 input.fform-card__range-number::-webkit-inner-spin-button {
   -webkit-appearance: none;
-          appearance: none;
+  appearance: none;
   margin: 0;
   padding: 0;
 }
@@ -1832,7 +1837,7 @@ input.fform-card__range-number::-webkit-inner-spin-button {
 
 .form-card__checkbox:focus + .checkbox__fake {
   -webkit-box-shadow: 0 0 0 2px #AF4FFF;
-          box-shadow: 0 0 0 2px #AF4FFF;
+  box-shadow: 0 0 0 2px #AF4FFF;
 }
 
 .radio__fake {
@@ -1873,14 +1878,14 @@ input.fform-card__range-number::-webkit-inner-spin-button {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   background-color: #000;
 }
 
 .form-card__radio:focus + .radio__fake {
   -webkit-box-shadow: 0 0 0 2px #AF4FFF;
-          box-shadow: 0 0 0 2px #AF4FFF;
+  box-shadow: 0 0 0 2px #AF4FFF;
 }
 
 .form-card__label:not(:last-child) {
@@ -2049,8 +2054,8 @@ input.fform-card__range-number::-webkit-inner-spin-button {
 
 .pagination-item-prev {
   -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
   text-align: left;
   margin: 0;
   padding: 0;
@@ -2058,8 +2063,8 @@ input.fform-card__range-number::-webkit-inner-spin-button {
 
 .pagination-item-next {
   -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
   text-align: right;
   margin: 0;
   padding: 0;
@@ -2152,6 +2157,7 @@ input.fform-card__range-number::-webkit-inner-spin-button {
   -ms-flex-positive: 1;
   flex-grow: 1;
 }
+
 .product-card__container {
   margin-left: 140px;
   display: -webkit-box;
@@ -2159,8 +2165,8 @@ input.fform-card__range-number::-webkit-inner-spin-button {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .catalog-products {
@@ -2258,20 +2264,17 @@ input.fform-card__range-number::-webkit-inner-spin-button {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .icon-styles:hover {
   color: #000000;
   opacity: 100;
 }
-
-
-
 
 .link-main:hover::after {
   fill: #000000;
@@ -2280,4 +2283,62 @@ input.fform-card__range-number::-webkit-inner-spin-button {
 .link-main:focus {
   -webkit-box-shadow: 0 0 0 2px #AF4FFF;
   box-shadow: 0 0 0 2px #AF4FFF;
+}
+
+/*не понимаю как его стилизовать, есть какие-то отступы и они все ломают,
+а другие не срабатывают */
+.cart-item {
+  position: relative;
+}
+
+.popover {
+  position: absolute;
+  top: 30px;
+  right: -90px;
+  z-index: 1;
+  box-sizing: border-box;
+  font-family: "PT Sans Narrow", sans-serif;
+  color: #fff;
+  background-color: #000;
+  min-height: 224px;
+}
+
+.popover-cart {
+  width: 320px;
+}
+
+.popover-content {
+  height: 100%;
+}
+
+.cart-item-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cart-item {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 40px 180px 10px;
+  column-gap: 25px;
+  row-gap: 40px;
+  padding: 20px 20px;
+}
+
+.cart-item-button.button  {
+  background-color: #000000;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cart-item-title {
+  font-family: "Rubik", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0;
+  padding: 0;
 }
