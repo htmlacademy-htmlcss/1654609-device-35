@@ -2285,11 +2285,11 @@ input.fform-card__range-number::-webkit-inner-spin-button {
   box-shadow: 0 0 0 2px #AF4FFF;
 }
 
-/*не понимаю как его стилизовать, есть какие-то отступы и они все ломают,
-а другие не срабатывают */
 .cart-item {
   position: relative;
 }
+
+/*поповер встает позади нижнего блока, как сдлеать, чтобы он выпадал поверх? */
 
 .popover {
   position: absolute;
@@ -2297,10 +2297,14 @@ input.fform-card__range-number::-webkit-inner-spin-button {
   right: -90px;
   z-index: 1;
   box-sizing: border-box;
-  font-family: "PT Sans Narrow", sans-serif;
   color: #fff;
   background-color: #000;
   min-height: 224px;
+  display: none;
+}
+
+.popover-open {
+  display: block;
 }
 
 .popover-cart {
@@ -2311,13 +2315,13 @@ input.fform-card__range-number::-webkit-inner-spin-button {
   height: 100%;
 }
 
-.cart-item-list {
+ul.cart-items-list {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.cart-item {
+.cart-item-popover {
   list-style-type: none;
   display: grid;
   grid-template-columns: 40px 180px 10px;
@@ -2326,7 +2330,7 @@ input.fform-card__range-number::-webkit-inner-spin-button {
   padding: 20px 20px;
 }
 
-.cart-item-button.button  {
+.cart-item-button.button {
   background-color: #000000;
   border: none;
   padding: 0;
@@ -2341,4 +2345,53 @@ input.fform-card__range-number::-webkit-inner-spin-button {
   line-height: 20px;
   margin: 0;
   padding: 0;
+}
+
+.products-amount-price {
+  background-color: #1A1A1A;
+  display: grid;
+  grid-template-columns: 120px 150px;
+  column-gap: 10px;
+  padding: 20px 20px;
+}
+
+.products-price {
+  font-family: "Rubik", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: right;
+  margin: 0;
+  padding: 0;
+}
+
+.products-amount {
+  font-family: "Rubik", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+/*по макету отступ от кнопки по 20 по бокам, но только поставив 16 встало нормально
+почему? */
+
+.button-cart-item {
+  margin: 0;
+  padding: 20px 16px;
+}
+
+.button-cart {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  padding: 14.5px 25px;
+  align-items: center;
 }
