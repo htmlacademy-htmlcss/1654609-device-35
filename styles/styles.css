@@ -1693,6 +1693,7 @@ fieldset {
   margin-left: 10px;
 }
 
+/*как отцентрировать сумму по тоглу? */
 .label-number span {
   font-weight: 400;
   font-size: 14px;
@@ -1701,7 +1702,10 @@ fieldset {
   font-size: 14px;
   line-height: 20px;
   color: rgba(0, 0, 0, 0.3);
+  margin: 0;
+  padding: 0;
 }
+
 
 .form-card__range-scale {
   width: 200px;
@@ -1756,15 +1760,15 @@ fieldset {
   font-size: 14px;
   line-height: 20px;
   color: rgba(0, 0, 0, 0.3);
-  margin-left: 10px;
   background-color: inherit;
-  margin-top: 3px;
   border: none;
 }
 
-.form-card__input-range:-webkit-outer-spin-button,
-.form-card__input-ranget::-webkit-inner-spin-button {
+input.form-card__range-number:-webkit-outer-spin-button,
+input.fform-card__range-number::-webkit-inner-spin-button {
   appearance: none;
+  margin: 0;
+  padding: 0;
 }
 
 .producnt-card__link-button {
@@ -1785,7 +1789,7 @@ fieldset {
 }
 
 .form-card__checkbox:checked + .checkbox__fake {
-  background-image: url("../img/svg/checkbox__check.svg");
+  background-image: url("../images/icons/checkbox_checked.svg");
   background-repeat: no-repeat;
   background-position: center;
   border: 2px solid #000;
