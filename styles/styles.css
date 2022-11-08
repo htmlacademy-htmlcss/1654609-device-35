@@ -124,21 +124,18 @@ body {
   outline: none;
 }
 
-.search__button {
+
+.button__default {
   background-color: transparent;
-  max-width: 160px;
+  min-width: 160px;
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-}
-
-.search__button button {
-  background-color: transparent;
   border: none;
   width: 100%;
   padding: 10px 20px;
   text-align: center;
-  border-left: 2px solid
+  border-left: 2px solid;
 }
 
 .search__button button:hover {
@@ -304,8 +301,6 @@ body {
   padding-right: 10px;
 }
 
-
-
 .first-line-menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -469,11 +464,11 @@ body {
   opacity: 0.3;
 }
 
-.slider__dot:not(active):hover {
+.slider__dot:not(:active):hover {
   opacity: 0.6;
 }
 
-.slider__dot:not(active):active {
+.slider__dot:not(:active):active {
   opacity: 0.3;
 }
 
@@ -1122,7 +1117,7 @@ body {
   width: 810px;
 }
 
-.newsletter-form input {
+.newsletter-field{
   border: none;
   width: 550px;
   background-color: inherit;
@@ -1134,7 +1129,7 @@ body {
   outline: none;
 }
 
-.newsletter-form input:-moz-placeholder-shown {
+.newsletter-field:-moz-placeholder-shown {
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -1143,7 +1138,7 @@ body {
   opacity: 0.5;
 }
 
-.newsletter-form input:-ms-input-placeholder {
+.newsletter-field:-ms-input-placeholder {
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -1152,7 +1147,7 @@ body {
   opacity: 0.5;
 }
 
-.newsletter-form input:placeholder-shown {
+.newsletter-field:placeholder-shown {
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -1161,11 +1156,11 @@ body {
   opacity: 0.5;
 }
 
-input::-ms-clear {
+newsletter-field:-ms-clear {
   display: none;
 }
 
-.newsletter-form input:focus {
+.newsletter-field:focus {
   background-color: #DCDCDC;
 }
 
@@ -1380,18 +1375,14 @@ input::-ms-clear {
 }
 
 .footer-social-item:active {
-  background: #FFC700;
+  box-shadow: 0 0 0 2px #AF4FFF;
 }
 
 
-.footer-social-item:active svg {
+.footer-social-item-image:active {
   opacity: 0.3;
 }
 
-
-.footer-social-item:focus {
-  color: 2px solid #AF4FFF;
-}
 
 .footer-social-item:nth-child(3n) {
   margin-right: 0;
@@ -1649,7 +1640,7 @@ input::-ms-clear {
   appearance: none;
 }
 
-fieldset {
+.fieldset {
   border: none;
 }
 
@@ -1669,7 +1660,7 @@ fieldset {
   border: none;
 }
 
-.product-card__form form {
+.product-card__form .form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1733,11 +1724,17 @@ fieldset {
   flex-wrap: wrap;
   position: relative;
   width: 200px;
-  margin-left: 10px;
 }
 
-/*как отцентрировать сумму по тоглу? */
-.label-number span {
+.label-sum {
+  display: flex;
+  flex-direction: row;
+  margin-left: -14px;
+  gap: 50px;
+}
+
+
+.label-number {
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
@@ -1803,8 +1800,8 @@ fieldset {
   border: none;
 }
 
-input.form-card__range-number:-webkit-outer-spin-button,
-input.fform-card__range-number::-webkit-inner-spin-button {
+.form-card__range-number:-webkit-outer-spin-button,
+.form-card__range-number::-webkit-inner-spin-button {
   -webkit-appearance: none;
   appearance: none;
   margin: 0;
@@ -1941,7 +1938,7 @@ input.fform-card__range-number::-webkit-inner-spin-button {
 
 .product-card-link:hover::before {
   opacity: 0.5;
-  background-color: white;
+  background-color: #FFFFFF;
 }
 
 .product-card__item:hover .product-card__link {
@@ -1983,7 +1980,7 @@ input.fform-card__range-number::-webkit-inner-spin-button {
   right: 0;
   bottom: 0;
   opacity: 0.5;
-  background-color: white;
+  background-color: #FFFFFF;
 }
 
 
@@ -2248,6 +2245,7 @@ input.fform-card__range-number::-webkit-inner-spin-button {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  position: relative;
 }
 
 .icon-catalog {
@@ -2285,17 +2283,20 @@ input.fform-card__range-number::-webkit-inner-spin-button {
   box-shadow: 0 0 0 2px #AF4FFF;
 }
 
+/*не понимаю тогда, как убрать предыдущую иконку */
+.link-main:active::after {
+  background-image: url("../images/icons/minus.svg");
+}
+
 .cart-item {
   position: relative;
 }
-
-/*поповер встает позади нижнего блока, как сдлеать, чтобы он выпадал поверх? */
 
 .popover {
   position: absolute;
   top: 30px;
   right: -90px;
-  z-index: 1;
+  z-index: 200;
   box-sizing: border-box;
   color: #fff;
   background-color: #000;
@@ -2315,7 +2316,7 @@ input.fform-card__range-number::-webkit-inner-spin-button {
   height: 100%;
 }
 
-ul.cart-items-list {
+.cart-items-list {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -2376,13 +2377,6 @@ ul.cart-items-list {
   padding: 0;
 }
 
-/*по макету отступ от кнопки по 20 по бокам, но только поставив 16 встало нормально
-почему? */
-
-.button-cart-item {
-  margin: 0;
-  padding: 20px 16px;
-}
 
 .button-cart {
   font-family: "Raleway", "Arial", sans-serif;
@@ -2391,7 +2385,86 @@ ul.cart-items-list {
   font-size: 18px;
   line-height: 21px;
   text-transform: uppercase;
-  letter-spacing: 0.2em;
   padding: 14.5px 25px;
+  display: flex;
+  justify-content: center;
   align-items: center;
+  text-align: center;
+  width: 280px;
+  height: 50px;
+  margin: 20px 20px;
+}
+
+
+.sub-menu__column:not(:last-child) {
+  margin-right: 30px;
+}
+
+.sub-menu__item-column {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.catalog-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sub-menu__item {
+  margin: 0;
+  padding: 0;
+}
+
+/*как ограничить ширину и max пробовала и просто ширину и как сделать, чтобы при открытии инспекта не прыгало меню?
+как-то на корзине все ок, сделала так же, но с меню не работает */
+
+
+.sub-menu__list {
+  list-style-type: none;
+  position: absolute;
+  min-width: 1160px;
+  min-height: 140px;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  padding-top: 15px;
+  padding-left: 60px;
+  background-color: #FFE17F;
+  right: 5.6%;
+  top: 32%;
+  z-index: 20;
+  transition: 1s;
+  opacity: 0;
+}
+
+.sub-menu__list.active {
+  visibility: visible;
+  transition: 1s;
+  opacity: 1;
+}
+
+.sub-menu__link {
+  text-decoration: none;
+  display: block;
+  position: relative;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: none;
+}
+
+._checked {
+  box-shadow: 0 1px 0 0 #000;
+}
+
+._hidden {
+  visibility: hidden;
+}
+
+.sub-menu__column li {
+  padding-bottom: 15px;
 }
