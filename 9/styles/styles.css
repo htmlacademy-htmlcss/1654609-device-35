@@ -2483,19 +2483,17 @@ newsletter-field:-ms-clear {
   text-transform: none;
 }
 
-.sub-menu__item:hover {
+.sub-menu__link:hover {
   opacity: 0.6;
   cursor: pointer;
 }
 
-.sub-menu__item:active {
+.sub-menu__link:active {
   opacity: 0.3;
   cursor: pointer;
 }
 
-/*не работает фокус*/
-
-.sub-menu__item:focus {
+.sub-menu__link:focus {
   -webkit-box-shadow: 0 0 0 2px #AF4FFF;
   box-shadow: 0 0 0 2px #AF4FFF
 }
@@ -2513,11 +2511,11 @@ newsletter-field:-ms-clear {
   padding-bottom: 15px;
 }
 
-.sub-menu__column.column-1 {
+.column-1 {
   width: 222px;
 }
 
-.sub-menu__column.column-2 {
+.column-2 {
   width: 182px;
 }
 
@@ -2528,18 +2526,21 @@ newsletter-field:-ms-clear {
   display: flex;
   width: 100%;
   height: 100%;
-  background-color: #F0F0F0;
-  opacity: 0.9;
+  background-color: rgba(240, 240, 240, 0.9);
   z-index: 25;
+  visibility: ;
+  transition: 1s;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
-/*почему  есть прозрачность есть тут? я же ставлю цвет без прозрачности?*/
 .modal {
   position: relative;
   margin: auto;
   padding: 72px 80px;
   background-color: #FFFFFF;
   border: 10px solid #000;
+  box-shadow: 0px 10px 0px rgba(0, 0, 0, 0.1);
 }
 
 .modal-auth {
@@ -2571,10 +2572,28 @@ newsletter-field:-ms-clear {
   color: #000000;
 }
 
-.auth-form .field-group {
-  margin: 0;
+
+.auth-form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 40px;
   margin-bottom: 42px;
 }
+
+.field-group {
+  flex-basis: 360px;
+}
+
+
+.amount {
+  width: 180px;
+}
+
+.field-group-3{
+  flex-grow: 1;
+}
+
 
 .visually-visible {
   font-family: "Raleway", "Arial", sans-serif;
@@ -2582,19 +2601,137 @@ newsletter-field:-ms-clear {
   font-size: 18px;
   line-height: 20px;
   color: #000000;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 14px;
 }
 .field-group {
   display: flex;
   flex-direction: column;
   margin: 0;
 }
+
 .field {
   margin: 0;
   padding: 8px 14px;
   font: inherit;
   font-weight: 400;
   color: #000000;
-  opacity: 0.3;
   background-color:  #F0F0F0;
   border: none;
+}
+
+.field:hover {
+  background-color: #DCDCDC;
+}
+.field:active {
+  background-color: #EBEBEB;
+}
+.field:focus {
+  box-shadow: 0 0 0 2px #AF4FFF;
+}
+.field:invalid {
+  box-shadow: 0 0 0 2px #FF3D3D;
+}
+.field:placeholder-shown {
+  opacity: 0.5;
+}
+
+.auth-form-field-3  {
+  flex-grow: 1;
+}
+
+.name {
+  background-image: url("../images/icons/user-gray.svg");
+  background-repeat: no-repeat;
+  background-position: 96% 50%;
+}
+
+
+.email {
+  background-image: url("../images/icons/email.svg");
+  background-repeat: no-repeat;
+  background-position: 96% 50%;
+}
+
+.email::before {
+  content: "Забавный у вас адрес";
+  position: absolute;
+  bottom: -5px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000;
+}
+.email:invalid::before {
+  border: 2px solid #FF3D3D;
+}
+
+.amount {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.amount-label {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 14px;
+}
+
+
+.amount-label::after {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background-image: url("../images/icons/info-small.svg");
+  margin-left: 8px;
+  background-position: 0 50%;
+  background-repeat: no-repeat;
+}
+
+.less .more .number {
+  margin: 0;
+  background-color: #F0F0F0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 20px;
+}
+
+.number::-webkit-outer-spin-button, .number::-webkit-inner-spin-button {
+  display: none;
+}
+
+.number {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  margin: 0 -5px;
+  position: relative;
+  z-index: 1;
+  width: 60px;
+  height: 60px;
+  background-color: #F0F0F0;
+  border: none;
+}
+
+.popup-button {
+  border: none;
+  width: 60px;
+  height: 60px;
+  position: relative;
+  z-index: 3;
+  background-color: #F0F0F0;
+}
+
+.popup-button:focus {
+  cursor: pointer;
+  box-shadow: 0 0 0 1px #AF4FFF;
 }
