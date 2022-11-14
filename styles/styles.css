@@ -63,8 +63,7 @@ body {
   color: #000000;
   background-color: #FFE17F;
   width: 1160px;
-  height: 186px;
-  margin: 20px 140px 0 140px;
+  margin: 40px 140px 0 140px;
 }
 
 
@@ -232,6 +231,7 @@ body {
 .navigation-list-menu {
   margin: 0;
   padding: 0;
+  padding-right: 60px;
   list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -281,7 +281,7 @@ body {
   font-weight: 800;
   text-align: center;
   color: #000000;
-  background-color: #FFE17F;
+  background-color: transparent;
   text-decoration: none;
   text-transform: uppercase;
   display: -webkit-box;
@@ -2528,7 +2528,7 @@ newsletter-field:-ms-clear {
   height: 100%;
   background-color: rgba(240, 240, 240, 0.9);
   z-index: 25;
-  visibility: ;
+  visibility: hidden;
   transition: 1s;
   overflow-y: auto;
   overflow-x: hidden;
