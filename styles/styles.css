@@ -261,6 +261,7 @@ body {
   font-size: 18px;
   line-height: 30px;
   font-weight: 800;
+  letter-spacing: 0.2em;
   text-align: center;
   color: #000000;
   background-color: #FFE17F;
@@ -279,6 +280,7 @@ body {
   font-size: 18px;
   line-height: 30px;
   font-weight: 800;
+  letter-spacing: 0.2em;
   text-align: center;
   color: #000000;
   background-color: transparent;
@@ -296,7 +298,7 @@ body {
 }
 
 .navigation-title-catalog {
-  padding-right: 10px;
+  padding-right: 16px;
 }
 
 .first-line-menu {
@@ -304,7 +306,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   width: 1040px;
-  margin: 30px 60px;
+  margin: 20px 60px;
 }
 
 .first-block {
@@ -489,9 +491,10 @@ body {
 
 .advantages-title {
   margin: 0;
-  padding-top: 15px;
+  padding-top: 35px;
   font-size: 36px;
   line-height: 30px;
+  font-weight: 400;
   color: #000000;
 }
 
