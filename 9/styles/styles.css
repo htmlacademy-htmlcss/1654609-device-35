@@ -63,8 +63,7 @@ body {
   color: #000000;
   background-color: #FFE17F;
   width: 1160px;
-  height: 186px;
-  margin: 20px 140px 0 140px;
+  margin: 40px 140px 0 140px;
 }
 
 
@@ -232,6 +231,7 @@ body {
 .navigation-list-menu {
   margin: 0;
   padding: 0;
+  padding-right: 60px;
   list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -261,6 +261,7 @@ body {
   font-size: 18px;
   line-height: 30px;
   font-weight: 800;
+  letter-spacing: 0.2em;
   text-align: center;
   color: #000000;
   background-color: #FFE17F;
@@ -279,9 +280,10 @@ body {
   font-size: 18px;
   line-height: 30px;
   font-weight: 800;
+  letter-spacing: 0.2em;
   text-align: center;
   color: #000000;
-  background-color: #FFE17F;
+  background-color: transparent;
   text-decoration: none;
   text-transform: uppercase;
   display: -webkit-box;
@@ -296,7 +298,7 @@ body {
 }
 
 .navigation-title-catalog {
-  padding-right: 10px;
+  padding-right: 16px;
 }
 
 .first-line-menu {
@@ -304,7 +306,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   width: 1040px;
-  margin: 30px 60px;
+  margin: 20px 60px;
 }
 
 .first-block {
@@ -489,9 +491,10 @@ body {
 
 .advantages-title {
   margin: 0;
-  padding-top: 15px;
+  padding-top: 35px;
   font-size: 36px;
   line-height: 30px;
+  font-weight: 400;
   color: #000000;
 }
 
@@ -872,6 +875,7 @@ body {
   font-weight: 800;
   font-size: 20px;
   line-height: 24px;
+  letter-spacing: 0.2em;
   text-align: center;
   text-transform: uppercase;
   color: #000000;
@@ -2295,6 +2299,12 @@ newsletter-field:-ms-clear {
   box-shadow: 0 0 0 2px #AF4FFF;
 }
 
+.link-main:focus-within .sub-menu__list {
+  display: block;
+}
+
+
+
 /*не понимаю тогда, как убрать предыдущую иконку */
 .link-main:active::after {
   background-image: url("../images/icons/minus.svg");
@@ -2528,7 +2538,7 @@ newsletter-field:-ms-clear {
   height: 100%;
   background-color: rgba(240, 240, 240, 0.9);
   z-index: 25;
-  visibility: ;
+  visibility: hidden;
   transition: 1s;
   overflow-y: auto;
   overflow-x: hidden;
