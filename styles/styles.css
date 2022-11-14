@@ -63,8 +63,7 @@ body {
   color: #000000;
   background-color: #FFE17F;
   width: 1160px;
-  height: 186px;
-  margin: 20px 140px 0 140px;
+  margin: 40px 140px 0 140px;
 }
 
 
@@ -94,7 +93,7 @@ body {
   border: 2px solid black;
   border-radius: 18px;
   position: relative;
-  z-index: 55;
+  z-index: 20;
 }
 
 .search__input-wrapper {
@@ -223,9 +222,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 1040px;
-  height: 50px;
-  margin: 0 auto;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -235,6 +231,7 @@ body {
 .navigation-list-menu {
   margin: 0;
   padding: 0;
+  padding-right: 60px;
   list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -264,6 +261,7 @@ body {
   font-size: 18px;
   line-height: 30px;
   font-weight: 800;
+  letter-spacing: 0.2em;
   text-align: center;
   color: #000000;
   background-color: #FFE17F;
@@ -282,9 +280,10 @@ body {
   font-size: 18px;
   line-height: 30px;
   font-weight: 800;
+  letter-spacing: 0.2em;
   text-align: center;
   color: #000000;
-  background-color: #FFE17F;
+  background-color: transparent;
   text-decoration: none;
   text-transform: uppercase;
   display: -webkit-box;
@@ -294,11 +293,12 @@ body {
   -ms-flex-align: center;
   align-items: center;
   padding: 0;
-  margin-left: 0;
+  margin-left: 60px;
+  z-index: 5;
 }
 
 .navigation-title-catalog {
-  padding-right: 10px;
+  padding-right: 16px;
 }
 
 .first-line-menu {
@@ -306,7 +306,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   width: 1040px;
-  margin: 30px 60px;
+  margin: 20px 60px;
 }
 
 .first-block {
@@ -491,9 +491,10 @@ body {
 
 .advantages-title {
   margin: 0;
-  padding-top: 15px;
+  padding-top: 35px;
   font-size: 36px;
   line-height: 30px;
+  font-weight: 400;
   color: #000000;
 }
 
@@ -874,6 +875,7 @@ body {
   font-weight: 800;
   font-size: 20px;
   line-height: 24px;
+  letter-spacing: 0.2em;
   text-align: center;
   text-transform: uppercase;
   color: #000000;
@@ -1117,7 +1119,7 @@ body {
   width: 810px;
 }
 
-.newsletter-field{
+.newsletter-field {
   border: none;
   width: 550px;
   background-color: inherit;
@@ -1375,6 +1377,7 @@ newsletter-field:-ms-clear {
 }
 
 .footer-social-item:active {
+  -webkit-box-shadow: 0 0 0 2px #AF4FFF;
   box-shadow: 0 0 0 2px #AF4FFF;
 }
 
@@ -1619,8 +1622,14 @@ newsletter-field:-ms-clear {
 
 .select {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   width: 140px;
 }
@@ -1637,6 +1646,8 @@ newsletter-field:-ms-clear {
   background-image: url("../images/icons/arrow-small.svg");
   background-repeat: no-repeat;
   background-position: right 16px center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
 }
 
@@ -1727,7 +1738,12 @@ newsletter-field:-ms-clear {
 }
 
 .label-sum {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
   margin-left: -14px;
   gap: 50px;
@@ -2283,6 +2299,12 @@ newsletter-field:-ms-clear {
   box-shadow: 0 0 0 2px #AF4FFF;
 }
 
+.link-main:focus-within .sub-menu__list {
+  display: block;
+}
+
+
+
 /*не понимаю тогда, как убрать предыдущую иконку */
 .link-main:active::after {
   background-image: url("../images/icons/minus.svg");
@@ -2296,7 +2318,8 @@ newsletter-field:-ms-clear {
   position: absolute;
   top: 30px;
   right: -90px;
-  z-index: 200;
+  z-index: 20;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   color: #fff;
   background-color: #000;
@@ -2324,8 +2347,12 @@ newsletter-field:-ms-clear {
 
 .cart-item-popover {
   list-style-type: none;
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 40px 25px 180px 25px 10px;
   grid-template-columns: 40px 180px 10px;
+  -webkit-column-gap: 25px;
+  -moz-column-gap: 25px;
   column-gap: 25px;
   row-gap: 40px;
   padding: 20px 20px;
@@ -2350,8 +2377,12 @@ newsletter-field:-ms-clear {
 
 .products-amount-price {
   background-color: #1A1A1A;
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 120px 10px 150px;
   grid-template-columns: 120px 150px;
+  -webkit-column-gap: 10px;
+  -moz-column-gap: 10px;
   column-gap: 10px;
   padding: 20px 20px;
 }
@@ -2386,8 +2417,14 @@ newsletter-field:-ms-clear {
   line-height: 21px;
   text-transform: uppercase;
   padding: 14.5px 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   text-align: center;
   width: 280px;
@@ -2417,30 +2454,29 @@ newsletter-field:-ms-clear {
   padding: 0;
 }
 
-/*как ограничить ширину и max пробовала и просто ширину и как сделать, чтобы при открытии инспекта не прыгало меню?
-как-то на корзине все ок, сделала так же, но с меню не работает */
-
-
 .sub-menu__list {
   list-style-type: none;
   position: absolute;
   min-width: 1160px;
   min-height: 140px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 0;
   padding: 0;
-  padding-top: 15px;
-  padding-left: 60px;
+  padding-top: 70px;
   background-color: #FFE17F;
-  right: 5.6%;
-  top: 32%;
-  z-index: 20;
+  z-index: 2;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
   transition: 1s;
   opacity: 0;
 }
 
 .sub-menu__list.active {
   visibility: visible;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
   transition: 1s;
   opacity: 1;
 }
@@ -2457,7 +2493,23 @@ newsletter-field:-ms-clear {
   text-transform: none;
 }
 
+.sub-menu__link:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.sub-menu__link:active {
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.sub-menu__link:focus {
+  -webkit-box-shadow: 0 0 0 2px #AF4FFF;
+  box-shadow: 0 0 0 2px #AF4FFF
+}
+
 ._checked {
+  -webkit-box-shadow: 0 1px 0 0 #000;
   box-shadow: 0 1px 0 0 #000;
 }
 
@@ -2467,4 +2519,229 @@ newsletter-field:-ms-clear {
 
 .sub-menu__column li {
   padding-bottom: 15px;
+}
+
+.column-1 {
+  width: 222px;
+}
+
+.column-2 {
+  width: 182px;
+}
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(240, 240, 240, 0.9);
+  z-index: 25;
+  visibility: hidden;
+  transition: 1s;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  padding: 72px 80px;
+  background-color: #FFFFFF;
+  border: 10px solid #000;
+  box-shadow: 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.modal-auth {
+  width: 760px;
+}
+
+.modal-close-button {
+  position: absolute;
+  padding: 0;
+  top: 84px;
+  right: 80px;
+  width: 26px;
+  height: 26px;
+  background-color: #FFFFFF;
+  border: none;
+  background-image: url("../images/icons/icon-cross.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.modal-title {
+  margin: 0;
+  margin-bottom: 42px;
+  font-family: "Raleway", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+  color: #000000;
+}
+
+
+.auth-form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 42px;
+}
+
+.field-group {
+  flex-basis: 360px;
+}
+
+
+.amount {
+  width: 180px;
+}
+
+.field-group-3{
+  flex-grow: 1;
+}
+
+
+.visually-visible {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 14px;
+}
+.field-group {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.field {
+  margin: 0;
+  padding: 8px 14px;
+  font: inherit;
+  font-weight: 400;
+  color: #000000;
+  background-color:  #F0F0F0;
+  border: none;
+}
+
+.field:hover {
+  background-color: #DCDCDC;
+}
+.field:active {
+  background-color: #EBEBEB;
+}
+.field:focus {
+  box-shadow: 0 0 0 2px #AF4FFF;
+}
+.field:invalid {
+  box-shadow: 0 0 0 2px #FF3D3D;
+}
+.field:placeholder-shown {
+  opacity: 0.5;
+}
+
+.auth-form-field-3  {
+  flex-grow: 1;
+}
+
+.name {
+  background-image: url("../images/icons/user-gray.svg");
+  background-repeat: no-repeat;
+  background-position: 96% 50%;
+}
+
+
+.email {
+  background-image: url("../images/icons/email.svg");
+  background-repeat: no-repeat;
+  background-position: 96% 50%;
+}
+
+.email::before {
+  content: "Забавный у вас адрес";
+  position: absolute;
+  bottom: -5px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000;
+}
+.email:invalid::before {
+  border: 2px solid #FF3D3D;
+}
+
+.amount {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.amount-label {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 14px;
+}
+
+
+.amount-label::after {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background-image: url("../images/icons/info-small.svg");
+  margin-left: 8px;
+  background-position: 0 50%;
+  background-repeat: no-repeat;
+}
+
+.less .more .number {
+  margin: 0;
+  background-color: #F0F0F0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 20px;
+}
+
+.number::-webkit-outer-spin-button, .number::-webkit-inner-spin-button {
+  display: none;
+}
+
+.number {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  margin: 0 -5px;
+  position: relative;
+  z-index: 1;
+  width: 60px;
+  height: 60px;
+  background-color: #F0F0F0;
+  border: none;
+}
+
+.popup-button {
+  border: none;
+  width: 60px;
+  height: 60px;
+  position: relative;
+  z-index: 3;
+  background-color: #F0F0F0;
+}
+
+.popup-button:focus {
+  cursor: pointer;
+  box-shadow: 0 0 0 1px #AF4FFF;
 }
