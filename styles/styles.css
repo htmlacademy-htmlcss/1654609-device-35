@@ -2299,6 +2299,12 @@ newsletter-field:-ms-clear {
   box-shadow: 0 0 0 2px #AF4FFF;
 }
 
+.link-main:focus-within .sub-menu__list {
+  display: block;
+}
+
+
+
 /*не понимаю тогда, как убрать предыдущую иконку */
 .link-main:active::after {
   background-image: url("../images/icons/minus.svg");
