@@ -1270,7 +1270,8 @@ newsletter-field:-ms-clear {
   justify-content: space-between;
   width: 1160px;
   margin: 0 auto;
-  padding: 61px;
+  padding-bottom: 61px;
+  padding-top: 62px;
 }
 
 .footer-adress-text {
@@ -1322,7 +1323,6 @@ newsletter-field:-ms-clear {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: 444px;
 }
 
 .footer-navigation-list {
@@ -1331,6 +1331,7 @@ newsletter-field:-ms-clear {
   display: flex;
   gap: 35px;
   margin-bottom: 62px;
+  padding: 0;
 }
 
 
@@ -1340,6 +1341,7 @@ newsletter-field:-ms-clear {
   font-weight: 800;
   font-size: 18px;
   line-height: 21px;
+  letter-spacing: 0.2em;
   color: #FFFFFF;
   text-decoration: none;
   text-transform: uppercase;
