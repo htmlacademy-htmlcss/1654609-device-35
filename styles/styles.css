@@ -153,6 +153,26 @@ body {
   box-shadow: 0 0 0 2px #AF4FFF;
 }
 
+.list-catalog {
+  width: 497px;
+  margin: 0;
+  padding: 0;
+  margin-right: 0;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 26px;
+  gap: 36px;
+}
+
 .navigation-list-user {
   width: 497px;
   margin: 0;
@@ -164,27 +184,22 @@ body {
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  gap: 36px;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   margin-left: 26px;
 }
 
-.second-block-navigation {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  gap: 36px;
+.login {
+  margin-right: 186px;
+}
 
+.compare {
+  padding: 0;
+  margin: 0;
+  padding-right: 18px;
 }
 
 .cart-button {
@@ -317,7 +332,7 @@ body {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin: -135px auto 70px;
+  margin: -135px auto 45px;
   position: relative;
 }
 
@@ -393,7 +408,7 @@ body {
 
 .product-main-info {
   width: 560px;
-  margin: 105px 140px 38px 40px;
+  margin: 105px 140px 0 40px;
   z-index: 1;
 }
 
@@ -436,6 +451,7 @@ body {
   justify-content: center;
   position: absolute;
   left: 0;
+  margin-top: -30px;
 }
 
 .slider__dot {
@@ -554,6 +570,7 @@ body {
   list-style-type: none;
   margin: 0;
   height: 250px;
+  padding: 0;
   background-color: #FFFFFF;
 
 }
@@ -625,13 +642,13 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 116px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -648,7 +665,7 @@ body {
   flex-direction: column;
   width: 290px;
   margin: 0;
-  margin-right: 116px;
+  padding: 0;
   list-style-type: none;
   padding-bottom: 72px;
   padding-top: 84px;
@@ -660,11 +677,15 @@ body {
   width: 7px;
   min-height: 319px;
   top: 1165px;
-  left: 460px;
+  left: 415px;
   background-color: #000;
 }
 
 .services-title {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
   width: 450px;
   margin: 0;
   margin-bottom: 34px;
@@ -841,7 +862,7 @@ body {
   border: none;
 }
 
-.button-special-delivery:hover .button-car {
+.button-special-delivery:hover .car {
   background-color: #FFC700;
   cursor: pointer;
 }
@@ -881,7 +902,7 @@ body {
   color: #000000;
 }
 
-.button-car {
+.car {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -896,7 +917,7 @@ body {
   background-color: #FFE17F;
 }
 
-.info-button {
+.info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -906,8 +927,9 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 125px;
-  height: 100px;
+  width: 40px;
+  height: 40px;
+  padding-right: 42px;
 }
 
 .about-title {
@@ -1248,7 +1270,8 @@ newsletter-field:-ms-clear {
   justify-content: space-between;
   width: 1160px;
   margin: 0 auto;
-  padding: 61px;
+  padding-bottom: 61px;
+  padding-top: 62px;
 }
 
 .footer-adress-text {
@@ -1300,7 +1323,6 @@ newsletter-field:-ms-clear {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: 444px;
 }
 
 .footer-navigation-list {
@@ -1309,6 +1331,7 @@ newsletter-field:-ms-clear {
   display: flex;
   gap: 35px;
   margin-bottom: 62px;
+  padding: 0;
 }
 
 
@@ -1318,6 +1341,7 @@ newsletter-field:-ms-clear {
   font-weight: 800;
   font-size: 18px;
   line-height: 21px;
+  letter-spacing: 0.2em;
   color: #FFFFFF;
   text-decoration: none;
   text-transform: uppercase;
@@ -1717,6 +1741,7 @@ newsletter-field:-ms-clear {
   font-size: 18px;
   line-height: 20px;
   padding-bottom: 20px;
+  padding-top: 35px;
 }
 
 .form-card__legend::before {
@@ -1746,7 +1771,7 @@ newsletter-field:-ms-clear {
   -ms-flex-direction: row;
   flex-direction: row;
   margin-left: -14px;
-  gap: 50px;
+  gap: 30px;
 }
 
 
@@ -2311,13 +2336,16 @@ newsletter-field:-ms-clear {
 }
 
 .cart-item {
+  padding: 0;
+  margin: 0;
   position: relative;
+  margin-left: 18px;
 }
 
 .popover {
   position: absolute;
-  top: 30px;
-  right: -90px;
+  top: 125px;
+  right: 115px;
   z-index: 20;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -2550,7 +2578,7 @@ newsletter-field:-ms-clear {
   padding: 72px 80px;
   background-color: #FFFFFF;
   border: 10px solid #000;
-  box-shadow: 0px 10px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1);
 }
 
 .modal-auth {
@@ -2600,7 +2628,7 @@ newsletter-field:-ms-clear {
   width: 180px;
 }
 
-.field-group-3{
+.field-group-3 {
   flex-grow: 1;
 }
 
@@ -2615,6 +2643,7 @@ newsletter-field:-ms-clear {
   padding: 0;
   padding-bottom: 14px;
 }
+
 .field-group {
   display: flex;
   flex-direction: column;
@@ -2627,27 +2656,31 @@ newsletter-field:-ms-clear {
   font: inherit;
   font-weight: 400;
   color: #000000;
-  background-color:  #F0F0F0;
+  background-color: #F0F0F0;
   border: none;
 }
 
 .field:hover {
   background-color: #DCDCDC;
 }
+
 .field:active {
   background-color: #EBEBEB;
 }
+
 .field:focus {
   box-shadow: 0 0 0 2px #AF4FFF;
 }
+
 .field:invalid {
   box-shadow: 0 0 0 2px #FF3D3D;
 }
+
 .field:placeholder-shown {
   opacity: 0.5;
 }
 
-.auth-form-field-3  {
+.auth-form-field-3 {
   flex-grow: 1;
 }
 
@@ -2673,6 +2706,7 @@ newsletter-field:-ms-clear {
   line-height: 20px;
   color: #000;
 }
+
 .email:invalid::before {
   border: 2px solid #FF3D3D;
 }
@@ -2715,7 +2749,8 @@ newsletter-field:-ms-clear {
   padding: 20px;
 }
 
-.number::-webkit-outer-spin-button, .number::-webkit-inner-spin-button {
+.number::-webkit-outer-spin-button,
+.number::-webkit-inner-spin-button {
   display: none;
 }
 

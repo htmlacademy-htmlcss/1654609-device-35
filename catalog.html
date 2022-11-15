@@ -33,7 +33,7 @@
             </div>
           </form>
 
-          <ul class="navigation-list-user">
+          <ul class="navigation-list-user list-catalog">
             <li class="navigation-item">
               <a class="navigation-link-user" href="#">
                 <svg width="15" height="12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -94,7 +94,6 @@
           </li>
         </ul>
       </nav>
-      </div>
     </header>
 
 
@@ -113,7 +112,7 @@
                   fill="black" />
               </g>
               <defs>
-                <clipPath id="clip0_148_6879">
+                <clipPath id="clip0_148_6878">
                   <rect width="4" height="7" fill="white" transform="translate(0 0.5)" />
                 </clipPath>
               </defs>
@@ -152,95 +151,96 @@
               <fieldset class="form-card__fieldset fieldset form-card__range">
 
                 <legend class="form-card__legend">Cтоимость</legend>
+              </fieldset>
 
-                <div class="form-card__range-wrapper">
+              <div class="form-card__range-wrapper">
 
-                  <div class="form-card__range-scale">
-                    <div class="form-card__range-bar" style="width: 119px">
-                      <button class="form-card__range-toggle toggle-min">
-                        <span class="visually-hidden">Изменить минимальную цену.</span>
-                      </button>
-                      <button class="form-card__range-toggle toggle-max">
-                        <span class="visually-hidden">Изменить максимальную цену.</span>
-                      </button>
-                    </div>
-                  </div>
-
-                  <div class="label-sum">
-                    <label class="label-number">
-                      <span class="label-number-min">от</span>
-                      <input type="number" class="form-card__range-number" min="0" max="10000" value="0">
-                    </label>
-
-
-                    <label class="label-number">
-                      <span class="label-number-max">до</span>
-                      <input type="number" class="form-card__range-number" min="0" max="10000" value="5000">
-                    </label>
+                <div class="form-card__range-scale">
+                  <div class="form-card__range-bar" style="width: 119px">
+                    <button class="form-card__range-toggle toggle-min">
+                      <span class="visually-hidden">Изменить минимальную цену.</span>
+                    </button>
+                    <button class="form-card__range-toggle toggle-max">
+                      <span class="visually-hidden">Изменить максимальную цену.</span>
+                    </button>
                   </div>
                 </div>
 
-                <fieldset class="form-card__fieldset fieldset">
-                  <legend class="form-card__legend">Цвет</legend>
-                  <label class="form-card__label">
-                    <input type="checkbox" class="visually-hidden form-card__checkbox" checked name="color-black">
-                    <span class="checkbox__fake fake"></span>
-
-                    Черный
+                <div class="label-sum">
+                  <label class="label-number">
+                    <span class="label-number-min">от</span>
+                    <input type="number" name="price" class="form-card__range-number" min="0" max="10000" value="0">
                   </label>
 
-                  <label class="form-card__label">
-                    <input type="checkbox" class="visually-hidden form-card__checkbox" checked name="color-white">
-                    <span class="checkbox__fake fake"></span>
 
-                    Белый
-
+                  <label class="label-number">
+                    <span class="label-number-max">до</span>
+                    <input type="number" name="price" class="form-card__range-number" min="0" max="10000" value="5000">
                   </label>
+                </div>
+              </div>
 
-                  <label class="form-card__label">
-                    <input type="checkbox" class="visually-hidden form-card__checkbox" name="color-blue">
-                    <span class="checkbox__fake fake"></span>
+              <fieldset class="form-card__fieldset fieldset">
+                <legend class="form-card__legend">Цвет</legend>
+                <label class="form-card__label">
+                  <input type="checkbox" class="visually-hidden form-card__checkbox" checked name="color" value="black">
+                  <span class="checkbox__fake fake"></span>
+
+                  Черный
+                </label>
+
+                <label class="form-card__label">
+                  <input type="checkbox" class="visually-hidden form-card__checkbox" checked name="color" value="white">
+                  <span class="checkbox__fake fake"></span>
+
+                  Белый
+
+                </label>
+
+                <label class="form-card__label">
+                  <input type="checkbox" class="visually-hidden form-card__checkbox" name="color" value="blue">
+                  <span class="checkbox__fake fake"></span>
 
 
-                    Синий
-                  </label>
+                  Синий
+                </label>
 
-                  <label class="form-card__label">
-                    <input type="checkbox" class="visually-hidden form-card__checkbox" name="color-red">
-                    <span class="checkbox__fake fake"></span>
-
-
-                    Красный
-                  </label>
-
-                  <label class="form-card__label">
-                    <input type="checkbox" class="visually-hidden form-card__checkbox" name="color-pink">
-                    <span class="checkbox__fake fake"></span>
+                <label class="form-card__label">
+                  <input type="checkbox" class="visually-hidden form-card__checkbox" name="color" value="red">
+                  <span class="checkbox__fake fake"></span>
 
 
-                    Розовый
-                  </label>
+                  Красный
+                </label>
 
-                </fieldset>
+                <label class="form-card__label">
+                  <input type="checkbox" class="visually-hidden form-card__checkbox" name="color" value="pink">
+                  <span class="checkbox__fake fake"></span>
 
-                <fieldset class="form-card__fieldset fieldset">
 
-                  <legend class="form-card__legend"> BlueTooth</legend>
+                  Розовый
+                </label>
 
-                  <label class="form-card__label">
-                    <input type="radio" class="visually-hidden form-card__radio" value="yes" name="bluetooth" checked>
-                    <span class="radio__fake fake"></span>
-                    Есть
-                  </label>
+              </fieldset>
 
-                  <label class="form-card__label">
-                    <input type="radio" class="visually-hidden form-card__radio" value="no" name="bluetooth">
-                    <span class="radio__fake fake"></span>
-                    Нет
-                  </label>
-                </fieldset>
-                <button class="button-standart button-more" type="submit">Показать</button>
+              <fieldset class="form-card__fieldset fieldset">
 
+                <legend class="form-card__legend"> BlueTooth</legend>
+
+                <label class="form-card__label">
+                  <input type="radio" class="visually-hidden form-card__radio" value="yes" name="bluetooth" checked>
+                  <span class="radio__fake fake"></span>
+                  Есть
+                </label>
+
+                <label class="form-card__label">
+                  <input type="radio" class="visually-hidden form-card__radio" value="no" name="bluetooth">
+                  <span class="radio__fake fake"></span>
+                  Нет
+                </label>
+              </fieldset>
+              <button class="button-standart button-more" type="submit">Показать</button>
+            </form>
           </div>
         </div>
 
@@ -282,6 +282,8 @@
                   <a class="product-card-link" href="product.html">
                     <img class="product-card-image" src="images/pictures/product-1.jpg" alt="Cелфи-палка c телефоном"
                       width="360" height="380">
+                  </a>
+                  <a class="product-card-link" href="product.html">
                     <div class="product-card-content">
                       <h3 class="product-card-title">Любительская селфи-палка</h3>
                       <p class="product-price">500 ₽</p>
@@ -296,42 +298,47 @@
                   <a class="product-card-link" href="#">
                     <img class="product-card-image" src="images/pictures/product-2.jpg" alt="Селфи-палка большая"
                       width="360" height="380">
+                  </a>
+                  <a class="product-card-link" href="#">
                     <div class="product-card-content">
                       <h3 class="product-card-title">Профессиональная селфи-палка </h3>
                       <p class="product-price">1 500 ₽</p>
                     </div>
-                    <div class="product-card-hover">
-                      <a href="#" class="product-card__link button-standart">Подробнее</a>
-                    </div>
                   </a>
-
+                  <div class="product-card-hover">
+                    <a href="#" class="product-card__link button-standart">Подробнее</a>
+                  </div>
                 </li>
                 <li class="product-card__item">
                   <a class="product-card-link" href="#">
                     <img class="product-card-image" src="images/pictures/product-3.jpg" alt="Селфи-палка желтого цвета с
                 камерой" width="360" height="380">
+                  </a>
+                  <a class="product-card-link" href="#">
                     <div class="product-card-content">
                       <h3 class="product-card-title">Непотопляемая селфи-палка</h3>
                       <p class="product-price">2 500 ₽</p>
                     </div>
-                    <div class="product-card-hover">
-                      <a href="#" class="product-card__link button-standart">Подробнее</a>
-                    </div>
                   </a>
+                  <div class="product-card-hover">
+                    <a href="#" class="product-card__link button-standart">Подробнее</a>
+                  </div>
 
                 </li>
                 <li class="product-card__item">
                   <a class="product-card-link" href="#">
                     <img class="product-card-image" src="images/pictures/product-4.jpg" alt="Манекен руки с установленным на
                 ней телефоном" width="360" height="380">
+                  </a>
+                  <a class="product-card-link" href="#">
                     <div class="product-card-content">
                       <h3 class="product-card-title">Селфи-палка «Следуй за мной»</h3>
                       <p class="product-price">1500 ₽</p>
                     </div>
+                  </a>
                     <div class="product-card-hover">
                       <a href="#" class="product-card__link button-standart">Подробнее</a>
                     </div>
-                  </a>
                 </li>
               </ul>
               <button class="button button-show-more" type="button">Загрузить еще</button>
@@ -367,6 +374,7 @@
               </div>
             </div>
           </div>
+        </div>
       </section>
     </main>
 
